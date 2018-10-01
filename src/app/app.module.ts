@@ -84,17 +84,18 @@ export function HttpLoaderFactory(http: Http) {
     /**
      * Root effects
      */
-    EffectsModule.run(SecurityApiEffects),
-    EffectsModule.run(SecurityRouteEffects),
-    EffectsModule.run(SecurityNotificationEffects),
-
-    EffectsModule.run(OfficeSearchApiEffects),
-    EffectsModule.run(EmployeeSearchApiEffects),
-    EffectsModule.run(CustomerSearchApiEffects),
-    EffectsModule.run(AccountSearchApiEffects),
-    EffectsModule.run(RoleSearchApiEffects),
-    EffectsModule.run(LedgerSearchApiEffects),
-    EffectsModule.run(GroupSearchApiEffects)
+    EffectsModule.forRoot([
+      SecurityApiEffects,
+      SecurityRouteEffects,
+      SecurityNotificationEffects,
+      OfficeSearchApiEffects,
+      EmployeeSearchApiEffects,
+      CustomerSearchApiEffects,
+      AccountSearchApiEffects,
+      RoleSearchApiEffects,
+      LedgerSearchApiEffects,
+      GroupSearchApiEffects
+    ]),
   ],
   providers: [
     HttpClient,
