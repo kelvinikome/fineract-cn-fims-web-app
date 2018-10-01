@@ -19,6 +19,7 @@
 import {Action, ActionReducer} from '@ngrx/store';
 import {FetchRequest} from '../../services/domain/paging/fetch-request.model';
 import {createSelector} from 'reselect';
+import { ActionWithPayload } from './interface/action-with-payload';
 
 export function emptySearchResult(): SearchResult {
   return {
@@ -55,7 +56,7 @@ const initialState: SearchState = {
 };
 
 export const createSearchReducer = (entityName: string, reducer?: ActionReducer<SearchState>) => {
-  return function(state: SearchState = initialState, action: Action): SearchState {
+  return function(state: SearchState = initialState, action: ActionWithPayload): SearchState {
 
     switch (action.type) {
 

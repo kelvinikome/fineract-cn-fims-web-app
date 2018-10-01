@@ -16,9 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import {Action, ActionReducer} from '@ngrx/store';
+import {ActionReducer} from '@ngrx/store';
 import {createSelector} from 'reselect';
 import {RoutePayload} from './route-payload';
+import { ActionWithPayload } from './interface/action-with-payload';
 
 export interface Resource {
   identifier: string;
@@ -63,7 +64,7 @@ export const createResourceReducer =
 
     const identifier = (resource: any) => resource[identifierName];
 
-    return function (state: ResourceState = initialState, action: Action): ResourceState {
+    return function (state: ResourceState = initialState, action: ActionWithPayload): ResourceState {
 
       switch (action.type) {
 

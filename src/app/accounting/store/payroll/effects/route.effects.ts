@@ -21,13 +21,13 @@ import {Actions, Effect} from '@ngrx/effects';
 import {Router} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import * as payrollActions from '../payroll-collection.actions';
-import {Action} from '@ngrx/store';
+import { ActionWithPayload } from '../../../../common/store/interface/action-with-payload';
 
 @Injectable()
 export class PayrollCollectionRouteEffects {
 
   @Effect({ dispatch: false })
-  createPayrollSuccess$: Observable<Action> = this.actions$
+  createPayrollSuccess$: Observable<ActionWithPayload> = this.actions$
     .ofType(payrollActions.CREATE_SUCCESS)
     .map(action => action.payload)
     .do(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }));
