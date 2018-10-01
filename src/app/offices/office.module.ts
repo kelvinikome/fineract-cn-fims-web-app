@@ -90,17 +90,19 @@ import {DenominationFormComponent} from './detail/teller/detail/denomination/for
     CovalentStepsModule,
     CovalentDataTableModule,
     CovalentMessageModule,
-    EffectsModule.run(OfficeApiEffects),
-    EffectsModule.run(OfficeRouteEffects),
-    EffectsModule.run(OfficeNotificationEffects),
-
-    EffectsModule.run(TellerApiEffects),
-    EffectsModule.run(TellerRouteEffects),
-    EffectsModule.run(TellerNotificationEffects),
-
-    EffectsModule.run(TellerDenominationApiEffects),
-    EffectsModule.run(TellerDenominationRouteEffects),
-    EffectsModule.run(TellerDenominationNotificationEffects),
+    EffectsModule.forRoot([
+      OfficeApiEffects,
+      OfficeRouteEffects,
+      OfficeNotificationEffects,
+      
+      TellerApiEffects,
+      TellerRouteEffects,
+      TellerNotificationEffects,
+      
+      TellerDenominationApiEffects,
+      TellerDenominationRouteEffects,
+      TellerDenominationNotificationEffects
+    ]),
   ],
   declarations: [
     OfficeComponent,
