@@ -28,7 +28,7 @@ import {UserResolver} from './user.resolver';
 import {FimsSharedModule} from '../common/common.module';
 import {EmployeeExistsGuard} from './employee-exists.guard';
 import {Store} from '@ngrx/store';
-import {EmployeesStore, employeeStoreFactory} from './store/index';
+import {EmployeesStore, employeeStoreFactory} from './store';
 import {EmployeeNotificationEffects} from './store/effects/notification.effects';
 import {EffectsModule} from '@ngrx/effects';
 import {EmployeeApiEffects} from './store/effects/service.effects';

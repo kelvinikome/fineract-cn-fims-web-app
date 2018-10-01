@@ -18,7 +18,7 @@
  */
 import * as fromRoot from '../../store';
 import {ActionReducer, Store} from '@ngrx/store';
-import {createReducer} from '../../store/index';
+import {createReducer} from '../../store';
 import * as fromAuthentication from './authentication.reducer';
 import * as fromDepositProducts from './customer-deposit-products.reducer';
 import * as fromLoanProducts from './customer-loan-products.reducer';

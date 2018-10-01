@@ -20,8 +20,8 @@ import {Component} from '@angular/core';
 import {GroupDefinition} from '../../services/group/domain/group-definition.model';
 import {Frequency, Adjustment} from '../../services/group/domain/cycle.model'
 import {Observable} from 'rxjs/Observable';
-import * as fromGroups from '../store/index';
-import {GroupsStore} from '../store/index';
+import * as fromGroups from '../store';
+import {GroupsStore} from '../store';
 import {FrequencyOptionList} from './domain/frequency-option-list.model';
 import {AdjustmentOptionList} from './domain/adjustment-option-list.model';
 

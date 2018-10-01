@@ -21,7 +21,7 @@ import {TrialBalance} from '../../services/accounting/domain/trial-balance.model
 import * as fromAccounting from '../store';
 import {LOAD_TRIAL_BALANCE} from '../store/ledger/ledger.actions';
 import {Observable} from 'rxjs/Observable';
-import {AccountingStore} from '../store/index';
+import {AccountingStore} from '../store';
 import {MatCheckboxChange} from '@angular/material';
 
 @Component({

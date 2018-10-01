@@ -19,7 +19,7 @@
 import {Component} from '@angular/core';
 import {CustomerDocument} from '../../../../services/customer/domain/customer-document.model';
 import {ActivatedRoute, Router} from '@angular/router';
-import {CasesStore} from '../../store/index';
+import {CasesStore} from '../../store';
 import {CREATE, CreateDocumentAction} from '../../store/documents/document.actions';
 import * as fromCases from '../../store';
 import {Observable} from 'rxjs/Observable';

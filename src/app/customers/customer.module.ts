@@ -34,7 +34,7 @@ import {CustomerStatusComponent} from './detail/status/status.component';
 import {CustomerActivityComponent} from './detail/activity/activity.component';
 import {CustomerIndexComponent} from './detail/customer.index.component';
 import {CustomerExistsGuard} from './customer-exists.guard';
-import {CustomersStore, customerStoreFactory} from './store/index';
+import {CustomersStore, customerStoreFactory} from './store';
 import {Store} from '@ngrx/store';
 import {CustomerNotificationEffects} from './store/effects/notification.effects';
 import {CustomerRouteEffects} from './store/effects/route.effects';

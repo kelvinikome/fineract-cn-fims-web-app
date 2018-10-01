@@ -22,7 +22,7 @@ import {Customer} from '../../services/customer/domain/customer.model';
 import {Catalog} from '../../services/catalog/domain/catalog.model';
 import * as fromCustomers from '../store';
 import {Subscription} from 'rxjs/Subscription';
-import {CustomersStore} from '../store/index';
+import {CustomersStore} from '../store';
 import {CustomerService} from '../../services/customer/customer.service';
 import {Observable} from 'rxjs/Observable';
 

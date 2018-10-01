@@ -19,8 +19,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ChargeDefinition} from '../../../../services/portfolio/domain/charge-definition.model';
 import {ActivatedRoute, Router} from '@angular/router';
-import * as fromPortfolio from '../../store/index';
-import {PortfolioStore} from '../../store/index';
+import * as fromPortfolio from '../../store';
+import {PortfolioStore} from '../../store';
 import {Subscription} from 'rxjs/Subscription';
 import {CREATE} from '../../store/charges/charge.actions';
 import {FimsProduct} from '../../store/model/fims-product.model';

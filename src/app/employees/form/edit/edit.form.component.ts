@@ -24,7 +24,7 @@ import {Employee} from '../../../services/office/domain/employee.model';
 import {User} from '../../../services/identity/domain/user.model';
 import {UPDATE} from '../../store/employee.actions';
 import {Observable} from 'rxjs/Observable';
-import {EmployeesStore, getSelectedEmployee} from '../../store/index';
+import {EmployeesStore, getSelectedEmployee} from '../../store';
 
 @Component({
   templateUrl: './edit.form.component.html'

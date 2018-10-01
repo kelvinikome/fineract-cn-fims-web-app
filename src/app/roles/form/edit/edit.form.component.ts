@@ -22,7 +22,7 @@ import {Role} from '../../../services/identity/domain/role.model';
 import * as fromRoles from '../../store';
 import {Subscription} from 'rxjs/Subscription';
 import {SelectAction, UPDATE} from '../../store/role.actions';
-import {RolesStore} from '../../store/index';
+import {RolesStore} from '../../store';
 
 @Component({
   templateUrl: './edit.form.component.html'

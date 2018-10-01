@@ -18,7 +18,7 @@
  */
 import {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot} from '@angular/router';
 import {Injectable} from '@angular/core';
-import {CustomersStore} from '../../store/index';
+import {CustomersStore} from '../../store';
 import {ExistsGuardService} from '../../../common/guards/exists-guard';
 import {Observable} from 'rxjs/Observable';
 import * as fromCustomers from '../../store';

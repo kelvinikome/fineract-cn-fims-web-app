@@ -17,7 +17,7 @@
  * under the License.
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {CustomersStore} from '../../store/index';
+import {CustomersStore} from '../../store';
 import {ActivatedRoute} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 import {SelectFieldAction} from '../../store/catalogs/catalog.actions';

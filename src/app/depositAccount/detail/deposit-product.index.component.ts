@@ -17,7 +17,7 @@
  * under the License.
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {DepositAccountStore} from '../store/index';
+import {DepositAccountStore} from '../store';
 import {Subscription} from 'rxjs/Subscription';
 import {ActivatedRoute} from '@angular/router';
 import {SelectAction} from '../store/product.actions';

@@ -18,8 +18,8 @@
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import * as fromAccounting from '../../../store/index';
-import {AccountingStore} from '../../../store/index';
+import * as fromAccounting from '../../../store';
+import {AccountingStore} from '../../../store';
 import {TransactionType} from '../../../../services/accounting/domain/transaction-type.model';
 import {SelectAction, UPDATE} from '../../../store/ledger/transaction-type/transaction-type.actions';
 import {Observable} from 'rxjs/Observable';

@@ -19,7 +19,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {TableData} from '../../../common/data-table/data-table.component';
-import {CasesStore} from '../store/index';
+import {CasesStore} from '../store';
 import * as fromCases from '../store';
 import {LoadAllAction} from '../store/documents/document.actions';
 import {CaseSelection} from '../store/model/case-selection.model';

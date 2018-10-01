@@ -17,7 +17,7 @@
  * under the License.
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {CasesStore} from '../store/index';
+import {CasesStore} from '../store';
 import * as fromRoot from '../../../store';
 import * as fromCases from '../store';
 import {Observable} from 'rxjs/Observable';

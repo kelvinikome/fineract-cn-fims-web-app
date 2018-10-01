@@ -27,7 +27,7 @@ import {TranslateService} from '@ngx-translate/core';
 import * as fromAccounting from '../store';
 import * as fromRoot from '../../store';
 import {DELETE} from '../store/ledger/ledger.actions';
-import {AccountingStore} from '../store/index';
+import {AccountingStore} from '../store';
 import {SEARCH_BY_LEDGER} from '../../store/account/account.actions';
 import {FetchRequest} from '../../services/domain/paging/fetch-request.model';
 import {Account} from '../../services/accounting/domain/account.model';

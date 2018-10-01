@@ -22,7 +22,7 @@ import * as fromProducts from '../store';
 import {Observable} from 'rxjs/Observable';
 import {LoadAction} from '../store/tasks/task.actions';
 import {of} from 'rxjs/observable/of';
-import {PortfolioStore} from '../store/index';
+import {PortfolioStore} from '../store';
 import {PortfolioService} from '../../../services/portfolio/portfolio.service';
 import {ExistsGuardService} from '../../../common/guards/exists-guard';
 

@@ -27,7 +27,7 @@ import {CaseFormComponent} from './form/form.component';
 import {CaseListComponent} from './case.list.component';
 import {CaseDetailComponent} from './case.detail.component';
 import {CaseEditComponent} from './form/edit.component';
-import {CasesStore, caseStoreFactory} from './store/index';
+import {CasesStore, caseStoreFactory} from './store';
 import {Store} from '@ngrx/store';
 import {CaseExistsGuard} from './case-exists.guard';
 import {CaseDetailPaymentCycleComponent} from './payment-cycle/payment-cycle.component';

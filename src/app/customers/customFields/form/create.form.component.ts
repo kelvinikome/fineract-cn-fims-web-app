@@ -17,7 +17,7 @@
  * under the License.
  */
 import {Component} from '@angular/core';
-import {CustomersStore} from '../../store/index';
+import {CustomersStore} from '../../store';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Catalog} from '../../../services/catalog/domain/catalog.model';
 import {CREATE} from '../../store/catalogs/catalog.actions';

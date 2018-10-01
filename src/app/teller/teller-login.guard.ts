@@ -19,8 +19,8 @@
 import {Injectable} from '@angular/core';
 import {ActivatedRoute, ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
-import * as fromTeller from './store/index';
-import {TellerStore} from './store/index';
+import * as fromTeller from './store';
+import {TellerStore} from './store';
 
 @Injectable()
 export class TellerLoginGuard implements CanActivate {

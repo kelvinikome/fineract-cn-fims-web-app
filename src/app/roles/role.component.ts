@@ -23,7 +23,7 @@ import {TableData} from '../common/data-table/data-table.component';
 import * as fromRoot from '../store';
 import {Observable} from 'rxjs/Observable';
 import {SEARCH} from '../store/role/role.actions';
-import {RolesStore} from './store/index';
+import {RolesStore} from './store';
 
 @Component({
   templateUrl: './role.component.html'

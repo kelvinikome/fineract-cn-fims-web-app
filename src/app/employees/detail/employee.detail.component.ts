@@ -25,7 +25,7 @@ import {Subscription} from 'rxjs/Subscription';
 import {User} from '../../services/identity/domain/user.model';
 import * as fromEmployee from '../store';
 import {DELETE, SelectAction} from '../store/employee.actions';
-import {EmployeesStore} from '../store/index';
+import {EmployeesStore} from '../store';
 
 @Component({
   selector: 'fims-employee-detail',

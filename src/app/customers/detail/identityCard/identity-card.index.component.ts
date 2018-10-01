@@ -19,7 +19,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
 import {ActivatedRoute} from '@angular/router';
-import {CustomersStore} from '../../store/index';
+import {CustomersStore} from '../../store';
 import {SelectAction} from '../../store/identityCards/identity-cards.actions';
 
 @Component({

@@ -25,7 +25,7 @@ import * as fromRoot from '../store';
 
 import {Observable} from 'rxjs/Observable';
 import {SEARCH} from '../store/office/office.actions';
-import {OfficesStore} from './store/index';
+import {OfficesStore} from './store';
 
 @Component({
   selector: 'fims-office',

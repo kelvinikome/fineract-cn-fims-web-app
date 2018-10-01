@@ -19,8 +19,8 @@
 import {Component, Input,Output,OnInit,EventEmitter} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import { Meeting } from '../../../services/group/domain/meeting.model';
-import * as fromGroups from '../../store/index';
-import {GroupsStore} from '../../store/index';
+import * as fromGroups from '../../store';
+import {GroupsStore} from '../../store';
 
 
 

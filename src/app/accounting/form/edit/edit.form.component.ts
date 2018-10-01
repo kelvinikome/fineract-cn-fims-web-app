@@ -23,7 +23,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {UPDATE} from '../../store/ledger/ledger.actions';
 import * as fromAccounting from '../../store';
 import {Subscription} from 'rxjs/Subscription';
-import {AccountingStore} from '../../store/index';
+import {AccountingStore} from '../../store';
 
 @Component({
   templateUrl: './edit.form.component.html'

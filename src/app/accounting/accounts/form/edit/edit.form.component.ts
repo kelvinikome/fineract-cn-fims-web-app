@@ -22,7 +22,7 @@ import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 import * as fromAccounting from '../../../store';
-import {AccountingStore} from '../../../store/index';
+import {AccountingStore} from '../../../store';
 import {SelectAction, UPDATE} from '../../../store/account/account.actions';
 
 @Component({

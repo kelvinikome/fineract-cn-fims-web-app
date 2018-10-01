@@ -23,7 +23,7 @@ import {Observable} from 'rxjs/Observable';
 import {Subscription} from 'rxjs/Subscription';
 import {TdDialogService} from '@covalent/core';
 import {DELETE, SelectAction} from '../store/charges/charge.actions';
-import {PortfolioStore} from '../store/index';
+import {PortfolioStore} from '../store';
 import * as fromPortfolio from '../store';
 import {FimsProduct} from '../store/model/fims-product.model';
 

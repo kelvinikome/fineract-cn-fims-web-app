@@ -21,7 +21,7 @@ import {CustomerDocument} from '../../../../services/customer/domain/customer-do
 import {Observable} from 'rxjs/Observable';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CaseSelection} from '../../store/model/case-selection.model';
-import {CasesStore} from '../../store/index';
+import {CasesStore} from '../../store';
 import * as fromCases from '../../store';
 import {Subscription} from 'rxjs/Subscription';
 import {UpdateDocumentAction} from '../../store/documents/document.actions';

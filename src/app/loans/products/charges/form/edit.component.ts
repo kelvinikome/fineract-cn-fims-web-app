@@ -22,7 +22,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 import {UPDATE} from '../../store/charges/charge.actions';
 import * as fromPortfolio from '../../store';
-import {PortfolioStore} from '../../store/index';
+import {PortfolioStore} from '../../store';
 import {FimsProduct} from '../../store/model/fims-product.model';
 import {Observable} from 'rxjs/Observable';
 import {RangeActions} from '../../store/ranges/range.actions';

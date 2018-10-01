@@ -18,7 +18,7 @@
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {PortfolioStore} from './store/index';
+import {PortfolioStore} from './store';
 import {DELETE, ENABLE} from './store/product.actions';
 import {Subscription} from 'rxjs/Subscription';
 import * as fromPortfolio from './store';

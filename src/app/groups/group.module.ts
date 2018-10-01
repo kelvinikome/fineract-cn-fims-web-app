@@ -30,7 +30,7 @@ import {GroupEmployeesComponent} from './form/employees/employees.component';
 import {GroupCustomersComponent} from './form/customers/customers.component'
 import {EditGroupFormComponent} from './form/edit/edit.form.component';
 import {GroupExistsGuard} from './group-exists.guard';
-import {GroupsStore, groupStoreFactory} from './store/index';
+import {GroupsStore, groupStoreFactory} from './store';
 import {Store} from '@ngrx/store';
 import {GroupSelectComponent} from '../common/group-select/group-select.component'
 import {GroupDetailComponent} from './detail/group.detail.component'

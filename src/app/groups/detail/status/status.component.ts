@@ -19,7 +19,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
 import {CommandAction,GroupCommand} from '../../../services/group/domain/group-command.model';
-import {GroupsStore} from '../../store/index';
+import {GroupsStore} from '../../store';
 import {EXECUTE_COMMAND} from '../../store/groupTasks/group-task.actions';
 import {Group} from '../../../services/group/domain/group.model';
 import * as fromGroups from '../../store';

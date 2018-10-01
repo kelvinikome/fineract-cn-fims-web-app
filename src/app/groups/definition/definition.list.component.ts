@@ -19,7 +19,7 @@
 import {ActivatedRoute, Router} from '@angular/router';
 import * as fromGroups from '../store';
 import {Component, OnInit} from '@angular/core';
-import {GroupsStore} from '../store/index';
+import {GroupsStore} from '../store';
 import {GroupDefinition} from '../../services/group/domain/group-definition.model';
 import {Observable} from 'rxjs/Observable';
 import {LOAD_ALL} from '../store/definition/definition.actions';

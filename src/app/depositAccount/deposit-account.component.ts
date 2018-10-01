@@ -23,7 +23,7 @@ import {FetchRequest} from '../services/domain/paging/fetch-request.model';
 import * as fromDepositAccounts from './store';
 import {Observable} from 'rxjs/Observable';
 import {SEARCH} from './store/product.actions';
-import {DepositAccountStore} from './store/index';
+import {DepositAccountStore} from './store';
 import {ProductDefinition} from '../services/depositAccount/domain/definition/product-definition.model';
 
 @Component({

@@ -19,7 +19,7 @@
 import * as fromRoot from '../../../store';
 import {ActionReducer, Store} from '@ngrx/store';
 import {createSelector} from 'reselect';
-import {createReducer} from '../../../store/index';
+import {createReducer} from '../../../store';
 import * as fromProducts from './products.reducer';
 import * as fromProductTasks from './tasks/tasks.reducer';
 import * as fromProductCharges from './charges/charges.reducer';

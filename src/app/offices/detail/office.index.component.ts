@@ -18,7 +18,7 @@
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {SelectAction} from '../store/office.actions';
-import {OfficesStore} from '../store/index';
+import {OfficesStore} from '../store';
 import {ActivatedRoute} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 

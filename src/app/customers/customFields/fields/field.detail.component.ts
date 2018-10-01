@@ -20,7 +20,7 @@ import {Component} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {DELETE_FIELD} from '../../store/catalogs/catalog.actions';
 import {Field} from '../../../services/catalog/domain/field.model';
-import {CustomersStore} from '../../store/index';
+import {CustomersStore} from '../../store';
 import {TdDialogService} from '@covalent/core';
 import * as fromCustomers from '../../store';
 import {ActivatedRoute} from '@angular/router';

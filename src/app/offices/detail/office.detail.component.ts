@@ -26,9 +26,9 @@ import {Observable} from 'rxjs/Observable';
 import {TdDialogService} from '@covalent/core';
 import {TableData} from '../../common/data-table/data-table.component';
 import {DELETE} from '../store/office.actions';
-import {getSelectedOffice, OfficesStore} from '../store/index';
+import {getSelectedOffice, OfficesStore} from '../store';
 import {FimsPermission} from '../../services/security/authz/fims-permission.model';
-import * as fromRoot from '../../store/index';
+import * as fromRoot from '../../store';
 
 @Component({
   templateUrl: './office.detail.component.html'

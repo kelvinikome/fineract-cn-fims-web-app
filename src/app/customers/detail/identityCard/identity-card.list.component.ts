@@ -18,8 +18,8 @@
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
-import * as fromCustomers from '../../store/index';
-import {CustomersStore} from '../../store/index';
+import * as fromCustomers from '../../store';
+import {CustomersStore} from '../../store';
 import {Observable} from 'rxjs/Observable';
 import {TableData} from '../../../common/data-table/data-table.component';
 import {LOAD_ALL} from '../../store/identityCards/identity-cards.actions';

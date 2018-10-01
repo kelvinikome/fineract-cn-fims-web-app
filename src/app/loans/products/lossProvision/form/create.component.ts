@@ -18,8 +18,8 @@
  */
 import {Component} from '@angular/core';
 import {LossProvisionStep} from '../../../../services/portfolio/domain/loss-provision-step.model';
-import * as fromPortfolio from '../../store/index';
-import {PortfolioStore} from '../../store/index';
+import * as fromPortfolio from '../../store';
+import {PortfolioStore} from '../../store';
 import {ActivatedRoute, Router} from '@angular/router';
 import {UPDATE} from '../../store/lossProvision/loss-provision.actions';
 import {Observable} from 'rxjs/Observable';

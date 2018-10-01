@@ -21,9 +21,9 @@ import {DepositFormComponent} from './form.component';
 import {Customer} from '../../../services/customer/domain/customer.model';
 import {ProductInstance} from '../../../services/depositAccount/domain/instance/product-instance.model';
 import {ActivatedRoute, Router} from '@angular/router';
-import * as fromDeposits from '../store/index';
-import {DepositsStore} from '../store/index';
-import * as fromCustomers from '../../store/index';
+import * as fromDeposits from '../store';
+import {DepositsStore} from '../store';
+import * as fromCustomers from '../../store';
 import {Observable} from 'rxjs/Observable';
 import {UPDATE} from '../store/deposit.actions';
 

@@ -27,7 +27,7 @@ import * as fromAccountEntrySearch from './account/entries/search.reducer';
 import * as fromCheques from './cheques/cheques.reducer';
 import * as fromPayrolls from './payroll/payrolls.reducer';
 import {ActionReducer, Store} from '@ngrx/store';
-import {createReducer} from '../../store/index';
+import {createReducer} from '../../store';
 import {createSelector} from 'reselect';
 import {
   createResourceReducer,

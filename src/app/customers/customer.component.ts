@@ -24,7 +24,7 @@ import {Customer} from '../services/customer/domain/customer.model';
 import {Observable} from 'rxjs/Observable';
 import * as fromRoot from '../store';
 import {SEARCH} from '../store/customer/customer.actions';
-import {CustomersStore} from './store/index';
+import {CustomersStore} from './store';
 
 @Component({
   templateUrl: './customer.component.html'

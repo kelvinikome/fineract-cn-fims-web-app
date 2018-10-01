@@ -23,7 +23,7 @@ import {FimsValidators} from '../../common/validator/validators';
 import * as fromAccounting from '../store';
 import {SEARCH} from '../store/ledger/journal-entry/journal-entry.actions';
 import {Observable} from 'rxjs/Observable';
-import {AccountingStore} from '../store/index';
+import {AccountingStore} from '../store';
 import {DatePipe} from '@angular/common';
 import {JournalEntry} from '../../services/accounting/domain/journal-entry.model';
 import {Debtor} from '../../services/accounting/domain/debtor.model';

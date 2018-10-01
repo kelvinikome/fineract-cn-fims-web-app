@@ -20,7 +20,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ITdDataTableColumn} from '@covalent/core';
 import {TableData, TableFetchRequest} from '../../../../common/data-table/data-table.component';
 import {Observable} from 'rxjs/Observable';
-import {PortfolioStore} from '../../store/index';
+import {PortfolioStore} from '../../store';
 import {RangeActions} from '../../store/ranges/range.actions';
 import {ActivatedRoute, Router} from '@angular/router';
 import * as fromPortfolio from '../../store';

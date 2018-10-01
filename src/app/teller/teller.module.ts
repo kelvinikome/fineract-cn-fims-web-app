@@ -21,7 +21,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TellerRoutes} from './teller.routing';
 import {RouterModule} from '@angular/router';
-import {TellerStore, tellerStoreFactory} from './store/index';
+import {TellerStore, tellerStoreFactory} from './store';
 import {Store} from '@ngrx/store';
 import {TellerIndexComponent} from './teller.index.component';
 import {TellerLoginGuard} from './teller-login.guard';

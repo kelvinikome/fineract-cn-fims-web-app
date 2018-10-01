@@ -23,7 +23,7 @@ import * as fromEmployees from './store';
 import {Observable} from 'rxjs/Observable';
 import {LoadAction} from './store/employee.actions';
 import {of} from 'rxjs/observable/of';
-import {EmployeesStore} from './store/index';
+import {EmployeesStore} from './store';
 import {ExistsGuardService} from '../common/guards/exists-guard';
 
 @Injectable()

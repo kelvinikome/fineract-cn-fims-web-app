@@ -19,8 +19,8 @@
 import {Component, OnDestroy} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {TableData} from '../../common/data-table/data-table.component';
-import * as fromAccounting from '../store/index';
-import {AccountingStore} from '../store/index';
+import * as fromAccounting from '../store';
+import {AccountingStore} from '../store';
 import {PaymentSearchPayload, SEARCH} from '../store/payroll/payment.actions';
 import {FetchRequest} from '../../services/domain/paging/fetch-request.model';
 import {PayrollCollectionHistory} from '../../services/payroll/domain/payroll-collection-history.model';

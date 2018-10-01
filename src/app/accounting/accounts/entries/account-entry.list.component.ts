@@ -26,7 +26,7 @@ import {FimsValidators} from '../../../common/validator/validators';
 import * as fromAccounting from '../../store';
 import {Observable} from 'rxjs/Observable';
 import {Subscription} from 'rxjs/Subscription';
-import {AccountingStore} from '../../store/index';
+import {AccountingStore} from '../../store';
 import {SEARCH} from '../../store/account/entries/entries.actions';
 import {SelectAction} from '../../store/account/account.actions';
 import {DatePipe} from '@angular/common';

@@ -21,7 +21,7 @@ import {ProductDetailComponent} from './product.detail.component';
 import {ActivatedRouteStub, RouterLinkStubDirective} from '../../common/testing/router-stubs';
 import {TranslateModule} from '@ngx-translate/core';
 import {ActivatedRoute} from '@angular/router';
-import {PortfolioStore} from './store/index';
+import {PortfolioStore} from './store';
 import {CUSTOM_ELEMENTS_SCHEMA, DebugElement} from '@angular/core';
 import {TdDialogService} from '@covalent/core';
 import {FimsProduct} from './store/model/fims-product.model';

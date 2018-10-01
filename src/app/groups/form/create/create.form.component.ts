@@ -23,7 +23,7 @@ import {GroupFormComponent} from '../form.component';
 import * as fromGroups from '../../store';
 import {Error} from '../../../services/domain/error.model';
 import {Subscription} from 'rxjs/Subscription';
-import {GroupsStore} from '../../store/index';
+import {GroupsStore} from '../../store';
 import {CREATE, RESET_FORM} from '../../store/group.actions';
 import {Catalog} from '../../../services/catalog/domain/catalog.model';
 import {Observable} from 'rxjs/Observable';

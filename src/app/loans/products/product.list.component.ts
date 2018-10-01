@@ -21,7 +21,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {TableData} from '../../common/data-table/data-table.component';
 import {FetchRequest} from '../../services/domain/paging/fetch-request.model';
-import {PortfolioStore} from './store/index';
+import {PortfolioStore} from './store';
 import * as fromPortfolio from './store';
 import {Observable} from 'rxjs/Observable';
 import {SEARCH} from './store/product.actions';

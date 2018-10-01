@@ -19,7 +19,7 @@
 import {Component} from '@angular/core';
 import {Catalog} from '../../services/catalog/domain/catalog.model';
 import {Observable} from 'rxjs/Observable';
-import {CustomersStore} from '../store/index';
+import {CustomersStore} from '../store';
 import * as fromCustomers from '../store';
 import {TableData} from '../../common/data-table/data-table.component';
 import {dataTypes} from './domain/datatype-types.model';

@@ -18,8 +18,8 @@
  */
 import {Component} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import * as fromOffices from '../../../../../store/index';
-import {OfficesStore} from '../../../../../store/index';
+import * as fromOffices from '../../../../../store';
+import {OfficesStore} from '../../../../../store';
 import {TellerDenomination} from '../../../../../../services/teller/domain/teller-denomination.model';
 import {CREATE_DENOMINATION} from '../../../../../store/teller/denomination/denomination.actions';
 import {Observable} from 'rxjs/Observable';

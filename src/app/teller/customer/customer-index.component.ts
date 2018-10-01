@@ -18,7 +18,7 @@
  */
 
 import {SelectCustomerAction} from '../store/teller.actions';
-import {TellerStore} from '../store/index';
+import {TellerStore} from '../store';
 import {Subscription} from 'rxjs/Subscription';
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';

@@ -18,7 +18,7 @@
  */
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {DepositAccountStore} from '../store/index';
+import {DepositAccountStore} from '../store';
 import {CREATE, RESET_FORM} from '../store/product.actions';
 import {Subscription} from 'rxjs/Subscription';
 import * as fromDepositAccount from '../store';

@@ -27,7 +27,7 @@ import {PermissionId} from '../../../services/security/authz/permission-id.type'
 import {FimsPermission} from '../../../services/security/authz/fims-permission.model';
 import {Permission} from '../../../services/identity/domain/permission.model';
 import {PermittableGroupIdMapper} from '../../../services/security/authz/permittable-group-id-mapper';
-import * as fromRoot from '../../index';
+import * as fromRoot from '../..';
 import {IdentityService} from '../../../services/identity/identity.service';
 import {Password} from '../../../services/identity/domain/password.model';
 

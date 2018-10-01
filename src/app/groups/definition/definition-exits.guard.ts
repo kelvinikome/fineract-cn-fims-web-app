@@ -21,7 +21,7 @@ import {Injectable} from '@angular/core';
 import * as fromGroups from '../store';
 import {Observable} from 'rxjs/Observable';
 import {of} from 'rxjs/observable/of';
-import {GroupsStore} from '../store/index';
+import {GroupsStore} from '../store';
 import {GroupService} from '../../services/group/group.service';
 import {ExistsGuardService} from '../../common/guards/exists-guard';
 import {LoadAction} from '../store/definition/definition.actions';

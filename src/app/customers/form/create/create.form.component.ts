@@ -23,7 +23,7 @@ import {CustomerFormComponent} from '../form.component';
 import * as fromCustomers from '../../store';
 import {Error} from '../../../services/domain/error.model';
 import {Subscription} from 'rxjs/Subscription';
-import {CustomersStore} from '../../store/index';
+import {CustomersStore} from '../../store';
 import {CREATE, RESET_FORM} from '../../store/customer.actions';
 import {Catalog} from '../../../services/catalog/domain/catalog.model';
 import {Observable} from 'rxjs/Observable';

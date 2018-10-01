@@ -19,7 +19,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
 import {ActivatedRoute} from '@angular/router';
-import {DepositsStore} from '../store/index';
+import {DepositsStore} from '../store';
 import {SelectAction} from '../store/deposit.actions';
 
 @Component({

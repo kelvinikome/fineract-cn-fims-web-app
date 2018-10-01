@@ -19,7 +19,7 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild} from '@angular/core';
 import { GroupDefinition} from '../../../services/group/domain/group-definition.model';
 import { ActivatedRoute, Router } from '@angular/router';
-import { GroupsStore } from '../../store/index';
+import { GroupsStore } from '../../store';
 import { CREATE, RESET_FORM } from '../../store/definition/definition.actions';
 import { Cycle } from '../../../services/group/domain/cycle.model'
 import { Subscription } from 'rxjs/Subscription';

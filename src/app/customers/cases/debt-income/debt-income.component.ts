@@ -17,12 +17,12 @@
  * under the License.
  */
 import {Component, OnInit} from '@angular/core';
-import * as fromCases from '../store/index';
-import {CasesStore} from '../store/index';
+import * as fromCases from '../store';
+import {CasesStore} from '../store';
 import {Observable} from 'rxjs/Observable';
 import {CreditWorthinessFactor} from '../../../services/portfolio/domain/individuallending/credit-worthiness-factor.model';
 import {CreditWorthinessSnapshot} from '../../../services/portfolio/domain/individuallending/credit-worthiness-snapshot.model';
-import * as fromCustomers from '../../store/index';
+import * as fromCustomers from '../../store';
 import {Customer} from '../../../services/customer/domain/customer.model';
 import {TableData} from '../../../common/data-table/data-table.component';
 import {FimsCase} from '../../../services/portfolio/domain/fims-case.model';

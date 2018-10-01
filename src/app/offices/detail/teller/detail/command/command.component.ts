@@ -17,8 +17,8 @@
  * under the License.
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import * as fromOffices from '../../../../store/index';
-import {OfficesStore} from '../../../../store/index';
+import * as fromOffices from '../../../../store';
+import {OfficesStore} from '../../../../store';
 import {Action, TellerManagementCommand} from '../../../../../services/teller/domain/teller-management-command.model';
 import {Teller} from '../../../../../services/teller/domain/teller.model';
 import {ActivatedRoute, Router} from '@angular/router';

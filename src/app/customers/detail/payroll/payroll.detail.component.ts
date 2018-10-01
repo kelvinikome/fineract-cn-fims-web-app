@@ -19,8 +19,8 @@
 import {Component} from '@angular/core';
 import {PayrollConfiguration} from '../../../services/payroll/domain/payroll-configuration.model';
 import {Observable} from 'rxjs/Observable';
-import * as fromCustomers from '../../store/index';
-import {CustomersStore} from '../../store/index';
+import * as fromCustomers from '../../store';
+import {CustomersStore} from '../../store';
 import {TableData} from '../../../common/data-table/data-table.component';
 
 @Component({

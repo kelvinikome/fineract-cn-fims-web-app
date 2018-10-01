@@ -19,8 +19,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {ActivatedRoute, Router} from '@angular/router';
-import * as fromCases from '../../store/index';
-import {CasesStore} from '../../store/index';
+import * as fromCases from '../../store';
+import {CasesStore} from '../../store';
 import {EXECUTE_COMMAND} from '../../store/case.actions';
 import {ExecuteCommandEvent} from './form.component';
 import {CaseCommand} from '../../../../services/portfolio/domain/case-command.model';

@@ -18,10 +18,10 @@
  */
 
 import * as fromRoot from '../../store';
-import * as fromTellers from '../store/teller/tellers.reducer';
-import * as fromDenominations from '../store/teller/denomination/denominations.reducer';
+import * as fromTellers from './teller/tellers.reducer';
+import * as fromDenominations from './teller/denomination/denominations.reducer';
 import {ActionReducer, Store} from '@ngrx/store';
-import {createReducer} from '../../store/index';
+import {createReducer} from '../../store';
 import {createSelector} from 'reselect';
 import {
   createResourceReducer,

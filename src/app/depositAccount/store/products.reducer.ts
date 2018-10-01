@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import * as productActions from '../store/product.actions';
+import * as productActions from './product.actions';
 import {ResourceState} from '../../common/store/resource.reducer';
 import {ProductDefinitionCommand} from '../../services/depositAccount/domain/definition/product-definition-command.model';
 

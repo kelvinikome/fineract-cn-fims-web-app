@@ -24,7 +24,7 @@ import * as fromAccounting from '../../store';
 import * as fromRoot from '../../../store';
 import {CREATE, RESET_FORM} from '../../store/ledger/journal-entry/journal-entry.actions';
 import {Error} from '../../../services/domain/error.model';
-import {AccountingStore} from '../../store/index';
+import {AccountingStore} from '../../store';
 import {Observable} from 'rxjs/Observable';
 import {todayAsISOString} from '../../../services/domain/date.converter';
 

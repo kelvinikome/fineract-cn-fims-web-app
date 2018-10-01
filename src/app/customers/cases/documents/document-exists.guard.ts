@@ -18,7 +18,7 @@
  */
 import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot} from '@angular/router';
-import {CasesStore} from '../store/index';
+import {CasesStore} from '../store';
 import {ExistsGuardService} from '../../../common/guards/exists-guard';
 import {PortfolioService} from '../../../services/portfolio/portfolio.service';
 import {Observable} from 'rxjs/Observable';

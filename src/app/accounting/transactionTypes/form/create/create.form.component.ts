@@ -19,8 +19,8 @@
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
 import {ActivatedRoute, Router} from '@angular/router';
-import * as fromAccounting from '../../../store/index';
-import {AccountingStore} from '../../../store/index';
+import * as fromAccounting from '../../../store';
+import {AccountingStore} from '../../../store';
 import {Error} from '../../../../services/domain/error.model';
 import {TransactionType} from '../../../../services/accounting/domain/transaction-type.model';
 import {CREATE, RESET_FORM} from '../../../store/ledger/transaction-type/transaction-type.actions';

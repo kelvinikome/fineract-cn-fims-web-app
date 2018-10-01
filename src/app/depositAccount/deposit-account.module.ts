@@ -17,7 +17,7 @@
  * under the License.
  */
 import {Store} from '@ngrx/store';
-import {DepositAccountStore, depositAccountStoreFactory} from './store/index';
+import {DepositAccountStore, depositAccountStoreFactory} from './store';
 import {DepositProductDefinitionNotificationEffects} from './store/effects/notification.effects';
 import {DepositProductDefinitionRouteEffects} from './store/effects/route.effects';
 import {DepositProductDefinitionApiEffects} from './store/effects/service.effects';

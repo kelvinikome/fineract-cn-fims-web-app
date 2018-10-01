@@ -19,7 +19,7 @@
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {GroupDefinition} from '../../../services/group/domain/group-definition.model';
 import {ActivatedRoute, Router} from '@angular/router';
-import {GroupsStore} from '../../store/index';
+import {GroupsStore} from '../../store';
 import {CREATE} from '../../store/definition/definition.actions';
 
 @Component({

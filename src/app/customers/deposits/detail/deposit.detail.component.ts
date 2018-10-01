@@ -19,8 +19,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductInstance} from '../../../services/depositAccount/domain/instance/product-instance.model';
 import {Observable} from 'rxjs/Observable';
-import * as fromDeposits from '../store/index';
-import {DepositsStore} from '../store/index';
+import * as fromDeposits from '../store';
+import {DepositsStore} from '../store';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({

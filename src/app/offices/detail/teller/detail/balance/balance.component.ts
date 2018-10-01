@@ -18,8 +18,8 @@
  */
 import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import * as fromOffices from '../../../../store/index';
-import {OfficesStore} from '../../../../store/index';
+import * as fromOffices from '../../../../store';
+import {OfficesStore} from '../../../../store';
 import {TellerBalance} from './services/teller-balance.model';
 import {BalanceSheetService} from './services/balance-sheet.service';
 

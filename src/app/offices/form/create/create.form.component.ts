@@ -24,7 +24,7 @@ import * as fromOffice from '../../store';
 import {CREATE, CREATE_BRANCH, RESET_FORM} from '../../store/office.actions';
 import {Error} from '../../../services/domain/error.model';
 import {Subscription} from 'rxjs/Subscription';
-import {OfficesStore} from '../../store/index';
+import {OfficesStore} from '../../store';
 
 @Component({
   templateUrl: './create.form.component.html'

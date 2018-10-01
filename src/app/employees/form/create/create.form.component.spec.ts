@@ -25,7 +25,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import {CreateEmployeeFormComponent} from './create.form.component';
 import {mapEmployee, mapUser} from '../form.mapper';
-import {EmployeesStore} from '../../store/index';
+import {EmployeesStore} from '../../store';
 import {CREATE} from '../../store/employee.actions';
 import {Store} from '@ngrx/store';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';

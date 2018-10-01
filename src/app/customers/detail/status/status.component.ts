@@ -23,7 +23,7 @@ import {ActivatedRoute} from '@angular/router';
 import * as fromCustomers from '../../store';
 import {Subscription} from 'rxjs/Subscription';
 import {EXECUTE_COMMAND, EXECUTE_TASK, LOAD_ALL} from '../../store/customerTasks/customer-task.actions';
-import {CustomersStore} from '../../store/index';
+import {CustomersStore} from '../../store';
 import {Observable} from 'rxjs/Observable';
 import {ProcessStep} from '../../../services/customer/domain/process-step.model';
 import {SelectTaskEvent} from './customer-task.component';

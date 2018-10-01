@@ -20,7 +20,7 @@ import {Injectable} from '@angular/core';
 import {Actions, Effect} from '@ngrx/effects';
 import {Router} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
-import * as payrollActions from '../../payroll/payroll-collection.actions';
+import * as payrollActions from '../payroll-collection.actions';
 import {Action} from '@ngrx/store';
 
 @Injectable()

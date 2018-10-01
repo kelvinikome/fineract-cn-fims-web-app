@@ -25,7 +25,7 @@ import * as fromCaseDocuments from './documents/documents.reducer'
 import * as fromCaseDocumentPages from './documents/pageNumber.reducer'
 
 import {ActionReducer, Store} from '@ngrx/store';
-import {createReducer} from '../../../store/index';
+import {createReducer} from '../../../store';
 import {createSelector} from 'reselect';
 import {
   createResourceReducer,

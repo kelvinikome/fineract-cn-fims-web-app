@@ -19,7 +19,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
 import {ActivatedRoute} from '@angular/router';
-import {CasesStore} from '../store/index';
+import {CasesStore} from '../store';
 import {SelectAction} from '../store/documents/document.actions';
 
 @Component({

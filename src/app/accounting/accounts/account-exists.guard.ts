@@ -23,7 +23,7 @@ import {Observable} from 'rxjs/Observable';
 import {of} from 'rxjs/observable/of';
 import {AccountingService} from '../../services/accounting/accounting.service';
 import {LoadAction} from '../store/account/account.actions';
-import {AccountingStore} from '../store/index';
+import {AccountingStore} from '../store';
 import {ExistsGuardService} from '../../common/guards/exists-guard';
 
 @Injectable()

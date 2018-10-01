@@ -17,8 +17,8 @@
  * under the License.
  */
 import {Component, OnInit} from '@angular/core';
-import * as fromAccouting from '../store/index';
-import {AccountingStore} from '../store/index';
+import * as fromAccouting from '../store';
+import {AccountingStore} from '../store';
 import {Observable} from 'rxjs/Observable';
 import {TableData} from '../../common/data-table/data-table.component';
 import {PayrollCollectionHistory} from '../../services/payroll/domain/payroll-collection-history.model';

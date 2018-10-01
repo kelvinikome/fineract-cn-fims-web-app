@@ -26,7 +26,7 @@ import {CreateRoleFormComponent} from './form/create/create.form.component';
 import {EditRoleFormComponent} from './form/edit/edit.form.component';
 import {FimsSharedModule} from '../common/common.module';
 import {RoleExistsGuard} from './role-exists.guard';
-import {RolesStore, roleStoreFactory} from './store/index';
+import {RolesStore, roleStoreFactory} from './store';
 import {Store} from '@ngrx/store';
 import {RoleNotificationEffects} from './store/effects/notification.effects';
 import {EffectsModule} from '@ngrx/effects';

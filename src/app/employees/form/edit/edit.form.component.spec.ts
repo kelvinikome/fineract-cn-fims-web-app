@@ -26,7 +26,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {User} from '../../../services/identity/domain/user.model';
 import {Employee} from '../../../services/office/domain/employee.model';
 import {Observable} from 'rxjs/Observable';
-import {EmployeesStore} from '../../store/index';
+import {EmployeesStore} from '../../store';
 import {Store} from '@ngrx/store';
 import {UPDATE} from '../../store/employee.actions';
 import * as fromEmployees from '../../store';

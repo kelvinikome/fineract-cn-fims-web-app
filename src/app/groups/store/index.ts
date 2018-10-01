@@ -24,7 +24,7 @@ import * as fromMeeting from './meeting/meeting.reducer'
 
 
 import {ActionReducer, Store} from '@ngrx/store';
-import {createReducer} from '../../store/index';
+import {createReducer} from '../../store';
 import {createSelector} from 'reselect';
 import {
   createResourceReducer,

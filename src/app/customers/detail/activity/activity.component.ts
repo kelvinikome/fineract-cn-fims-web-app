@@ -18,7 +18,7 @@
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Command} from '../../../services/customer/domain/command.model';
-import {CustomersStore} from '../../store/index';
+import {CustomersStore} from '../../store';
 import {LOAD_ALL} from '../../store/commands/commands.actions';
 import * as fromCustomers from '../../store';
 import {Subscription} from 'rxjs/Subscription';

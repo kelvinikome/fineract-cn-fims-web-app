@@ -17,8 +17,8 @@
  * under the License.
  */
 import {Component} from '@angular/core';
-import * as fromCustomers from '../../../store/index';
-import {CustomersStore} from '../../../store/index';
+import * as fromCustomers from '../../../store';
+import {CustomersStore} from '../../../store';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import {Field} from '../../../../services/catalog/domain/field.model';

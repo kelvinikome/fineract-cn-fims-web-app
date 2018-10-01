@@ -29,7 +29,7 @@ import {GroupOfficesComponent} from './offices/offices.component';
 import {GroupCustomersComponent} from './customers/customers.component';
 import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
-import {GroupsStore} from '../store/index';
+import {GroupsStore} from '../store';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {CountryService} from '../../services/country/country.service';
 import {Country} from '../../services/country/model/country.model';

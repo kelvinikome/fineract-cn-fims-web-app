@@ -17,8 +17,8 @@
  * under the License.
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import * as fromPortfolio from '../../../store/index';
-import {PortfolioStore} from '../../../store/index';
+import * as fromPortfolio from '../../../store';
+import {PortfolioStore} from '../../../store';
 import {ActivatedRoute, Router} from '@angular/router';
 import {RangeActions} from '../../../store/ranges/range.actions';
 import {Subscription} from 'rxjs/Subscription';

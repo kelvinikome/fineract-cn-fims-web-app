@@ -26,7 +26,7 @@ import * as fromEmployees from '../../store';
 import {Subscription} from 'rxjs/Subscription';
 import {CREATE, RESET_FORM} from '../../store/employee.actions';
 import {Error} from '../../../services/domain/error.model';
-import {EmployeesStore} from '../../store/index';
+import {EmployeesStore} from '../../store';
 
 @Component({
   templateUrl: './create.form.component.html'

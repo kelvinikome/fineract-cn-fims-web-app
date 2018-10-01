@@ -17,8 +17,8 @@
  * under the License.
  */
 import {Component, OnInit} from '@angular/core';
-import * as fromDeposits from '../../store/index';
-import {DepositsStore} from '../../store/index';
+import * as fromDeposits from '../../store';
+import {DepositsStore} from '../../store';
 import {Observable} from 'rxjs/Observable';
 import {ProductInstance} from '../../../../services/depositAccount/domain/instance/product-instance.model';
 import {IssuingCount} from '../../../../services/cheque/domain/issuing-count.model';

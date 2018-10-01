@@ -18,7 +18,7 @@
  */
 
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {RolesStore} from '../store/index';
+import {RolesStore} from '../store';
 import * as fromRoles from '../store';
 import {Role} from '../../services/identity/domain/role.model';
 import {DELETE, SelectAction} from '../store/role.actions';

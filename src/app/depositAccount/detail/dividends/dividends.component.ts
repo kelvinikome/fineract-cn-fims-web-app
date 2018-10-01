@@ -17,8 +17,8 @@
  * under the License.
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import * as fromDepositAccounts from '../../store/index';
-import {DepositAccountStore} from '../../store/index';
+import * as fromDepositAccounts from '../../store';
+import {DepositAccountStore} from '../../store';
 import {Observable} from 'rxjs/Observable';
 import {TableData} from '../../../common/data-table/data-table.component';
 import {LOAD_ALL} from '../../store/dividends/dividend.actions';

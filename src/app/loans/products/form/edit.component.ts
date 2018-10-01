@@ -19,7 +19,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Product} from '../../../services/portfolio/domain/product.model';
 import {ActivatedRoute, Router} from '@angular/router';
-import {PortfolioStore} from '../store/index';
+import {PortfolioStore} from '../store';
 import {RESET_FORM, UPDATE} from '../store/product.actions';
 import {Subscription} from 'rxjs/Subscription';
 import * as fromPortfolio from '../store';

@@ -22,7 +22,7 @@ import {TableData, TableFetchRequest} from '../../../common/data-table/data-tabl
 import {ChargeDefinition} from '../../../services/portfolio/domain/charge-definition.model';
 import {ITdDataTableColumn} from '@covalent/core';
 import {ActionOption, ActionOptions} from '../../../common/domain/action-option.model';
-import {PortfolioStore} from '../store/index';
+import {PortfolioStore} from '../store';
 import * as fromPortfolio from '../store';
 import {Observable} from 'rxjs/Observable';
 import {Subscription} from 'rxjs/Subscription';

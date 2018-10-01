@@ -19,8 +19,8 @@
 import {Component} from '@angular/core';
 import {TaskDefinition, TaskDefinitionCommand, TaskDefinitionType} from '../../services/customer/domain/task-definition.model';
 import {Observable} from 'rxjs/Observable';
-import * as fromCustomers from '../store/index';
-import {CustomersStore} from '../store/index';
+import * as fromCustomers from '../store';
+import {CustomersStore} from '../store';
 import {defaultCommandOptions} from './domain/command-options.model';
 import {defaultTypeOptions} from './domain/type-options.model';
 

@@ -17,7 +17,7 @@
  * under the License.
  */
 import {Component} from '@angular/core';
-import {AccountingStore} from '../../store/index';
+import {AccountingStore} from '../../store';
 import {PayrollCollectionSheet} from '../../../services/payroll/domain/payroll-collection-sheet.model';
 import {CREATE} from '../../store/payroll/payroll-collection.actions';
 import {ActivatedRoute, Router} from '@angular/router';

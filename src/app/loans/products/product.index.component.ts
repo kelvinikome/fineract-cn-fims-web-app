@@ -19,7 +19,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
 import {ActivatedRoute} from '@angular/router';
-import {PortfolioStore} from './store/index';
+import {PortfolioStore} from './store';
 import {SelectAction} from './store/product.actions';
 
 @Component({

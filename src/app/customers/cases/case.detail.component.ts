@@ -17,8 +17,8 @@
  * under the License.
  */
 import {Component, OnInit} from '@angular/core';
-import * as fromCases from './store/index';
-import {CasesStore} from './store/index';
+import * as fromCases from './store';
+import {CasesStore} from './store';
 import * as fromRoot from '../../store';
 import {Observable} from 'rxjs/Observable';
 import {FimsPermission} from '../../services/security/authz/fims-permission.model';

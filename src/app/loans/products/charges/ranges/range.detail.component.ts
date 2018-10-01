@@ -17,7 +17,7 @@
  * under the License.
  */
 import {Component, OnInit} from '@angular/core';
-import {PortfolioStore} from '../../store/index';
+import {PortfolioStore} from '../../store';
 import * as fromPortfolio from '../../store';
 import {Observable} from 'rxjs/Observable';
 import {RangeActions} from '../../store/ranges/range.actions';

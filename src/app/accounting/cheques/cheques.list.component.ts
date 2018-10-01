@@ -19,7 +19,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {ITdDataTableColumn, TdDialogService} from '@covalent/core';
-import {AccountingStore} from '../store/index';
+import {AccountingStore} from '../store';
 import * as fromAccounting from '../store';
 import {ChequeCRUDActions, ProcessAction} from '../store/cheques/cheque.actions';
 import {TranslateService} from '@ngx-translate/core';

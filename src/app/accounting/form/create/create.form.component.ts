@@ -24,7 +24,7 @@ import {Error} from '../../../services/domain/error.model';
 import * as fromAccounting from '../../store';
 import {Subscription} from 'rxjs/Subscription';
 import {CREATE, CREATE_SUB_LEDGER, RESET_FORM} from '../../store/ledger/ledger.actions';
-import {AccountingStore} from '../../store/index';
+import {AccountingStore} from '../../store';
 
 @Component({
   templateUrl: './create.form.component.html'

@@ -18,8 +18,8 @@
  */
 import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import * as fromGroups from '../../store/index';
-import {GroupsStore} from '../../store/index';
+import * as fromGroups from '../../store';
+import {GroupsStore} from '../../store';
 import {Meeting} from '../../../services/group/domain/meeting.model';
 import {LOAD_ALL} from '../../store/meeting/meeting.actions';
 import {TableData} from '../../../common/data-table/data-table.component';

@@ -21,7 +21,7 @@ import {Injectable} from '@angular/core';
 import * as fromCases from './store';
 import {Observable} from 'rxjs/Observable';
 import {of} from 'rxjs/observable/of';
-import {CasesStore} from './store/index';
+import {CasesStore} from './store';
 import {PortfolioService} from '../../services/portfolio/portfolio.service';
 import {LoadAction} from './store/case.actions';
 import {ExistsGuardService} from '../../common/guards/exists-guard';

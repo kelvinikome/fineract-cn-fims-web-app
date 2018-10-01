@@ -30,7 +30,7 @@ import {HeadquarterGuard} from './headquarter/headquarter.guard';
 import {HeadquarterNotFoundComponent} from './headquarter/headquarter-not-found.component';
 import {OfficeExistsGuard} from './office-exists.guard';
 import {Store} from '@ngrx/store';
-import {OfficesStore, officeStoreFactory} from './store/index';
+import {OfficesStore, officeStoreFactory} from './store';
 import {OfficeNotificationEffects} from './store/effects/notification.effects';
 import {EffectsModule} from '@ngrx/effects';
 import {OfficeRouteEffects} from './store/effects/route.effects';

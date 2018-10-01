@@ -27,7 +27,7 @@ import * as fromTasks from './tasks/tasks.reducer';
 import * as fromPayrollDistribution from './payroll/payroll.reducer';
 
 import {ActionReducer, Store} from '@ngrx/store';
-import {createReducer} from '../../store/index';
+import {createReducer} from '../../store';
 import {createSelector} from 'reselect';
 import {
   createResourceReducer,

@@ -22,8 +22,8 @@ import {ActivatedRouteStub, RouterLinkStubDirective, RouterStub} from '../../com
 import {ActivatedRoute, Router} from '@angular/router';
 import {TranslateModule} from '@ngx-translate/core';
 import {Observable} from 'rxjs/Observable';
-import * as fromCases from './store/index';
-import {CasesStore} from './store/index';
+import * as fromCases from './store';
+import {CasesStore} from './store';
 import * as fromCustomers from '../store';
 import * as fromRoot from '../../store';
 import {By} from '@angular/platform-browser';

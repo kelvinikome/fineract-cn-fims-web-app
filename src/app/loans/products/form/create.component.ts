@@ -19,7 +19,7 @@
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ProductFormComponent} from './form.component';
-import {PortfolioStore} from '../store/index';
+import {PortfolioStore} from '../store';
 import {CREATE, RESET_FORM} from '../store/product.actions';
 import * as fromPortfolio from '../store';
 import {Error} from '../../../services/domain/error.model';

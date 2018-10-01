@@ -21,7 +21,7 @@ import {Actions, Effect} from '@ngrx/effects';
 import {NotificationService, NotificationType} from '../../../../services/notification/notification.service';
 import {Observable} from 'rxjs/Observable';
 import {Action} from '@ngrx/store';
-import * as payrollActions from '../../payroll/payroll-collection.actions';
+import * as payrollActions from '../payroll-collection.actions';
 
 @Injectable()
 export class PayrollCollectionNotificationEffects {

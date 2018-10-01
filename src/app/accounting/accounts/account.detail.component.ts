@@ -22,7 +22,7 @@ import {ActivatedRoute} from '@angular/router';
 import * as fromAccounting from '../store';
 import * as fromRoot from '../../store';
 import {Subscription} from 'rxjs/Subscription';
-import {AccountingStore} from '../store/index';
+import {AccountingStore} from '../store';
 import {DELETE, SelectAction} from '../store/account/account.actions';
 import {Observable} from 'rxjs/Observable';
 import {FimsPermission} from '../../services/security/authz/fims-permission.model';

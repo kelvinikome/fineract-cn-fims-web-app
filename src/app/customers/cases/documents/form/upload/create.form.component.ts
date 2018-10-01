@@ -21,7 +21,7 @@ import {Component, OnDestroy} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {UploadPageFormData} from './upload-page.form.component';
 import {UploadPageAction} from '../../../store/documents/document.actions';
-import {CasesStore} from '../../../store/index';
+import {CasesStore} from '../../../store';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 import {CaseSelection} from '../../../store/model/case-selection.model';

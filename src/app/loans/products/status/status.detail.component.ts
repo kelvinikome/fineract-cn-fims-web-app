@@ -21,7 +21,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {TaskDefinition} from '../../../services/portfolio/domain/task-definition.model';
 import {DELETE, SelectAction} from '../store/tasks/task.actions';
-import {PortfolioStore} from '../store/index';
+import {PortfolioStore} from '../store';
 import {Subscription} from 'rxjs/Subscription';
 import * as fromPortfolio from '../store';
 import {Observable} from 'rxjs/Observable';

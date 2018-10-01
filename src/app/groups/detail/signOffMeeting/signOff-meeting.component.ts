@@ -36,7 +36,7 @@ import {Meeting} from '../../../services/group/domain/meeting.model'
 import {SignOffMeeting} from '../../../services/group/domain/signoff-meeting.model'
 import {UPDATE} from '../../store/meeting/meeting.actions';
 import {Group} from '../../../services/group/domain/group.model';
-import {GroupsStore} from '../../store/index';
+import {GroupsStore} from '../../store';
 
 
 @Component({

@@ -18,8 +18,8 @@
  */
 import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot} from '@angular/router';
-import * as fromAccounting from '../store/index';
-import {AccountingStore} from '../store/index';
+import * as fromAccounting from '../store';
+import {AccountingStore} from '../store';
 import {ExistsGuardService} from '../../common/guards/exists-guard';
 import {AccountingService} from '../../services/accounting/accounting.service';
 import {Observable} from 'rxjs/Observable';

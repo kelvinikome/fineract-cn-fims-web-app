@@ -17,8 +17,8 @@
  * under the License.
  */
 import {Component} from '@angular/core';
-import * as fromPortfolio from '../store/index';
-import {PortfolioStore} from '../store/index';
+import * as fromPortfolio from '../store';
+import {PortfolioStore} from '../store';
 import {Observable} from 'rxjs/Observable';
 import {TableData} from '../../../common/data-table/data-table.component';
 

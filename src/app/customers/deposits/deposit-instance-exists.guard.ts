@@ -21,7 +21,7 @@ import {Injectable} from '@angular/core';
 import * as fromDeposits from './store';
 import {Observable} from 'rxjs/Observable';
 import {of} from 'rxjs/observable/of';
-import {DepositsStore} from './store/index';
+import {DepositsStore} from './store';
 import {DepositAccountService} from '../../services/depositAccount/deposit-account.service';
 import {ExistsGuardService} from '../../common/guards/exists-guard';
 import {LoadAction} from './store/deposit.actions';

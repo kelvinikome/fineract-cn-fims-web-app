@@ -19,7 +19,7 @@
 import {Component} from '@angular/core';
 import {TaskDefinition} from '../../../services/customer/domain/task-definition.model';
 import {ActivatedRoute, Router} from '@angular/router';
-import {CustomersStore} from '../../store/index';
+import {CustomersStore} from '../../store';
 import {CREATE} from '../../store/tasks/task.actions';
 
 @Component({

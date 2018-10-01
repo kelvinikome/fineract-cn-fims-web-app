@@ -18,8 +18,8 @@
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
-import * as fromCustomers from '../../store/index';
-import {CustomersStore} from '../../store/index';
+import * as fromCustomers from '../../store';
+import {CustomersStore} from '../../store';
 import {Customer} from '../../../services/customer/domain/customer.model';
 import {DELETE} from '../../store/identityCards/identity-cards.actions';
 import {CREATE, DELETE as DELETE_SCAN, LoadAllAction} from '../../store/identityCards/scans/scans.actions';

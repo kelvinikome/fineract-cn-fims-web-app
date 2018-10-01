@@ -20,8 +20,8 @@ import {Component} from '@angular/core';
 import {TaskDefinition} from '../../../services/customer/domain/task-definition.model';
 import {Observable} from 'rxjs/Observable';
 import {ActivatedRoute, Router} from '@angular/router';
-import * as fromCustomer from '../../store/index';
-import {CustomersStore} from '../../store/index';
+import * as fromCustomer from '../../store';
+import {CustomersStore} from '../../store';
 import {UPDATE} from '../../store/tasks/task.actions';
 
 @Component({

@@ -24,7 +24,7 @@ import {Group} from '../services/group/domain/group.model';
 import {Observable} from 'rxjs/Observable';
 import * as fromRoot from '../store';
 import {SEARCH} from '../store/group/group.actions';
-import {GroupsStore} from './store/index';
+import {GroupsStore} from './store';
 
 @Component({
   templateUrl: './group.component.html'

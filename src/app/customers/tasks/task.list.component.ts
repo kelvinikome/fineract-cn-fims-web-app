@@ -19,7 +19,7 @@
 import {ActivatedRoute, Router} from '@angular/router';
 import * as fromCustomers from '../store';
 import {Component} from '@angular/core';
-import {CustomersStore} from '../store/index';
+import {CustomersStore} from '../store';
 import {TaskDefinition, TaskDefinitionType} from '../../services/customer/domain/task-definition.model';
 import {Observable} from 'rxjs/Observable';
 import {LOAD_ALL} from '../store/tasks/task.actions';

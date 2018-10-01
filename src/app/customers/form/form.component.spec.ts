@@ -30,7 +30,7 @@ import {CustomerEmployeesComponent} from './employees/employees.component';
 import {CustomerOfficesComponent} from './offices/offices.component';
 import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
-import {CustomersStore} from '../store/index';
+import {CustomersStore} from '../store';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {CountryService} from '../../services/country/country.service';
 import {Country} from '../../services/country/model/country.model';

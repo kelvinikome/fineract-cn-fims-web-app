@@ -22,7 +22,7 @@ import * as fromProducts from './store';
 import {Observable} from 'rxjs/Observable';
 import {LoadAction} from './store/product.actions';
 import {of} from 'rxjs/observable/of';
-import {PortfolioStore} from './store/index';
+import {PortfolioStore} from './store';
 import {PortfolioService} from '../../services/portfolio/portfolio.service';
 import {mapToFimsProduct} from './store/model/fims-product.mapper';
 import {ExistsGuardService} from '../../common/guards/exists-guard';

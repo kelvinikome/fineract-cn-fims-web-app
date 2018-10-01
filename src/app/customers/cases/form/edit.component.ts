@@ -19,10 +19,10 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Customer} from '../../../services/customer/domain/customer.model';
-import * as fromCases from '../store/index';
-import {CasesStore} from '../store/index';
+import * as fromCases from '../store';
+import {CasesStore} from '../store';
 import {UPDATE} from '../store/case.actions';
-import * as fromCustomers from '../../store/index';
+import * as fromCustomers from '../../store';
 import {Product} from '../../../services/portfolio/domain/product.model';
 import {Observable} from 'rxjs/Observable';
 import {PortfolioService} from '../../../services/portfolio/portfolio.service';

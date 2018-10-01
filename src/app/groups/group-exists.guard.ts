@@ -23,7 +23,7 @@ import {Observable} from 'rxjs/Observable';
 import {LoadAction} from './store/group.actions';
 import {of} from 'rxjs/observable/of';
 import {GroupService} from '../services/group/group.service';
-import {GroupsStore} from './store/index';
+import {GroupsStore} from './store';
 import {ExistsGuardService} from '../common/guards/exists-guard';
 
 @Injectable()

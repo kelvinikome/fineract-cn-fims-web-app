@@ -20,7 +20,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
-import {OfficesStore} from '../../store/index';
+import {OfficesStore} from '../../store';
 import {SelectAction} from '../../store/teller/teller.actions';
 
 @Component({

@@ -18,7 +18,7 @@
  */
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {DepositAccountStore} from '../store/index';
+import {DepositAccountStore} from '../store';
 import {RESET_FORM, UPDATE} from '../store/product.actions';
 import * as fromDepositAccount from '../store';
 import {ProductDefinition} from '../../services/depositAccount/domain/definition/product-definition.model';

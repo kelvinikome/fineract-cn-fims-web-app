@@ -20,8 +20,8 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {TableData} from '../../../../../common/data-table/data-table.component';
 import {Subscription} from 'rxjs/Subscription';
 import {Observable} from 'rxjs/Observable';
-import * as fromOffices from '../../../../store/index';
-import {OfficesStore} from '../../../../store/index';
+import * as fromOffices from '../../../../store';
+import {OfficesStore} from '../../../../store';
 import {LoadDenominationAction} from '../../../../store/teller/denomination/denomination.actions';
 import {DatePipe} from '@angular/common';
 

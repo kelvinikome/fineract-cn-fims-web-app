@@ -18,7 +18,7 @@
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {SelectAction} from '../store/group.actions';
-import {GroupsStore} from '../store/index';
+import {GroupsStore} from '../store';
 import {Subscription} from 'rxjs/Subscription';
 import {ActivatedRoute} from '@angular/router';
 

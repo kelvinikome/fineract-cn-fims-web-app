@@ -21,7 +21,7 @@ import {Injectable} from '@angular/core';
 import * as fromCustomers from '../store';
 import {Observable} from 'rxjs/Observable';
 import {of} from 'rxjs/observable/of';
-import {CustomersStore} from '../store/index';
+import {CustomersStore} from '../store';
 import {CustomerService} from '../../services/customer/customer.service';
 import {ExistsGuardService} from '../../common/guards/exists-guard';
 import {LoadAction} from '../store/tasks/task.actions';

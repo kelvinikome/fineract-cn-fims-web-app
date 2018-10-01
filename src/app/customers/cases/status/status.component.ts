@@ -19,8 +19,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
 import {ActivatedRoute, Router} from '@angular/router';
-import * as fromCases from '../store/index';
-import {CasesStore} from '../store/index';
+import * as fromCases from '../store';
+import {CasesStore} from '../store';
 import * as fromRoot from '../../../store';
 import {Observable} from 'rxjs/Observable';
 import {EXECUTE_TASK, LoadAllAction} from '../store/tasks/task.actions';

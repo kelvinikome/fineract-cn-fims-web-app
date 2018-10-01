@@ -19,7 +19,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {TaskDefinition} from '../../../../services/portfolio/domain/task-definition.model';
 import {ActivatedRoute, Router} from '@angular/router';
-import {PortfolioStore} from '../../store/index';
+import {PortfolioStore} from '../../store';
 import {Subscription} from 'rxjs/Subscription';
 import * as fromPortfolio from '../../store';
 import {UPDATE} from '../../store/tasks/task.actions';

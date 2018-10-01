@@ -22,7 +22,7 @@ import {Role} from '../../../services/identity/domain/role.model';
 import * as fromRoles from '../../store';
 import {Subscription} from 'rxjs/Subscription';
 import {Error} from '../../../services/domain/error.model';
-import {RolesStore} from '../../store/index';
+import {RolesStore} from '../../store';
 import {CREATE, RESET_FORM} from '../../store/role.actions';
 
 @Component({

@@ -21,7 +21,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Group} from '../../services/group/domain/group.model';
 import * as fromGroups from '../store';
 import {Subscription} from 'rxjs/Subscription';
-import {GroupsStore} from '../store/index';
+import {GroupsStore} from '../store';
 import {GroupService} from '../../services/group/group.service';
 import {Observable} from 'rxjs/Observable';
 import {SelectAction} from '../store/group.actions';

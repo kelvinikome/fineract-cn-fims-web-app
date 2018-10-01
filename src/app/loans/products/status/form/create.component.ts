@@ -21,7 +21,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {TaskDefinition} from '../../../../services/portfolio/domain/task-definition.model';
 import {ProductTaskFormComponent} from './form.component';
 import {Subscription} from 'rxjs/Subscription';
-import {PortfolioStore} from '../../store/index';
+import {PortfolioStore} from '../../store';
 import * as fromPortfolio from '../../store';
 import {CREATE, RESET_FORM} from '../../store/tasks/task.actions';
 import {Error} from '../../../../services/domain/error.model';

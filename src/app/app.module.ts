@@ -33,7 +33,7 @@ import {PortfolioService} from './services/portfolio/portfolio.service';
 import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {PermittableGroupIdMapper} from './services/security/authz/permittable-group-id-mapper';
-import {reducer} from './store';
+import {reducer, reducers} from './store';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import {NotificationService} from './services/notification/notification.service';
@@ -79,7 +79,7 @@ export function HttpLoaderFactory(http: Http) {
       }
     }),
     appRoutes,
-    StoreModule.provideStore(reducer),
+    StoreModule.forRoot(reducers),
 
     /**
      * Root effects

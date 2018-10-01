@@ -18,7 +18,7 @@
  */
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {GroupCommand} from '../../../services/group/domain/group-command.model';
-import {GroupsStore} from '../../store/index';
+import {GroupsStore} from '../../store';
 import {LOAD_ALL} from '../../store/commands/commands.actions';
 import * as fromGroups from '../../store';
 import {Subscription} from 'rxjs/Subscription';

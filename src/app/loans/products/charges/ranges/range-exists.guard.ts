@@ -23,7 +23,7 @@ import {Observable} from 'rxjs/Observable';
 import {of} from 'rxjs/observable/of';
 import {ExistsGuardService} from '../../../../common/guards/exists-guard';
 import {PortfolioService} from '../../../../services/portfolio/portfolio.service';
-import {PortfolioStore} from '../../store/index';
+import {PortfolioStore} from '../../store';
 import {RangeActions} from '../../store/ranges/range.actions';
 import {FimsRange} from '../../../../services/portfolio/domain/range-model';
 
