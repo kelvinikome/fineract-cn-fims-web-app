@@ -19,20 +19,20 @@
 import {Injectable} from '@angular/core';
 import {Actions, Effect} from '@ngrx/effects';
 import {Observable} from 'rxjs/Observable';
-import {Action} from '@ngrx/store';
 import * as ledgerActions from '../ledger.actions';
 import {Router} from '@angular/router';
+import { ActionWithPayload } from '../../../../common/store/interface/action-with-payload';
 
 @Injectable()
 export class LedgerRouteEffects {
   @Effect({ dispatch: false })
-  createLedgerSuccess$: Observable<Action> = this.actions$
+  createLedgerSuccess$: Observable<ActionWithPayload> = this.actions$
     .ofType(ledgerActions.CREATE_SUCCESS, ledgerActions.CREATE_SUB_LEDGER_SUCCESS, ledgerActions.UPDATE_SUCCESS)
     .map(action => action.payload)
     .do(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }));
 
   @Effect({ dispatch: false })
-  deleteLedgerSuccess$: Observable<Action> = this.actions$
+  deleteLedgerSuccess$: Observable<ActionWithPayload> = this.actions$
     .ofType(ledgerActions.DELETE_SUCCESS)
     .map(action => action.payload)
     .do(payload => {

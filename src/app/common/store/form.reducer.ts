@@ -16,8 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import {Action, ActionReducer} from '@ngrx/store';
+import {ActionReducer} from '@ngrx/store';
 import {Error} from '../../services/domain/error.model';
+import { ActionWithPayload } from './interface/action-with-payload';
 
 export interface FormState {
   error?: Error;
@@ -27,7 +28,7 @@ export const initialState: FormState = {};
 
 export const createFormReducer = (resource: string, reducer?: ActionReducer<FormState>) => {
 
-  return function(state: FormState = initialState, action: Action): FormState {
+  return function(state: FormState = initialState, action: ActionWithPayload): FormState {
 
     switch (action.type) {
 
