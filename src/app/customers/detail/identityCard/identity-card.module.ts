@@ -60,13 +60,15 @@ import {CustomerIdentificationCardScanRouteEffects} from '../../store/identityCa
     CovalentStepsModule,
     CovalentFileModule,
 
-    EffectsModule.run(CustomerIdentificationCardApiEffects),
-    EffectsModule.run(CustomerIdentificationCardRouteEffects),
-    EffectsModule.run(CustomerIdentificationCardNotificationEffects),
-
-    EffectsModule.run(CustomerIdentificationCardScanApiEffects),
-    EffectsModule.run(CustomerIdentificationCardScanRouteEffects),
-    EffectsModule.run(CustomerIdentificationCardScanNotificationEffects)
+    EffectsModule.forRoot([
+      CustomerIdentificationCardApiEffects,
+      CustomerIdentificationCardRouteEffects,
+      CustomerIdentificationCardNotificationEffects,
+      
+      CustomerIdentificationCardScanApiEffects,
+      CustomerIdentificationCardScanRouteEffects,
+      CustomerIdentificationCardScanNotificationEffects
+    ])
   ],
   declarations: [
     CustomerIdentityCardListComponent,

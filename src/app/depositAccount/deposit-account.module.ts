@@ -79,13 +79,15 @@ import {CreateDividendFormComponent} from './detail/dividends/form/create.compon
     CovalentStepsModule,
     CovalentMessageModule,
 
-    EffectsModule.run(DepositProductDefinitionApiEffects),
-    EffectsModule.run(DepositProductDefinitionRouteEffects),
-    EffectsModule.run(DepositProductDefinitionNotificationEffects),
-
-    EffectsModule.run(DepositProductDividendApiEffects),
-    EffectsModule.run(DepositProductDividendRouteEffects),
-    EffectsModule.run(DepositProductDividendNotificationEffects)
+    EffectsModule.forRoot([
+      DepositProductDefinitionApiEffects,
+      DepositProductDefinitionRouteEffects,
+      DepositProductDefinitionNotificationEffects,
+      
+      DepositProductDividendApiEffects,
+      DepositProductDividendRouteEffects,
+      DepositProductDividendNotificationEffects
+    ])
   ],
   declarations: [
     DepositProductComponent,
