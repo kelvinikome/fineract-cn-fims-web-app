@@ -18,24 +18,30 @@
  */
 import {Action} from '@ngrx/store';
 import {Observable} from 'rxjs/Observable';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Router} from '@angular/router';
 import {Injectable} from '@angular/core';
 import * as identificationCardActions from '../identity-cards.actions';
+import {map, tap} from 'rxjs/operators';
+import { ActionWithPayload } from '../../../../common/store/interface/action-with-payload';
 
 @Injectable()
 export class CustomerIdentificationCardRouteEffects {
   @Effect({ dispatch: false })
   createIdentificationCardSuccess$: Observable<Action> = this.actions$
-    .ofType(identificationCardActions.CREATE_SUCCESS, identificationCardActions.UPDATE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }));
+    .pipe(
+      ofType<ActionWithPayload>(identificationCardActions.CREATE_SUCCESS, identificationCardActions.UPDATE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }))
+    );
 
   @Effect({ dispatch: false })
   deleteIdentificationCardSuccess$: Observable<Action> = this.actions$
-    .ofType(identificationCardActions.DELETE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../../../../../../'], { relativeTo: payload.activatedRoute }));
+    .pipe(
+      ofType<ActionWithPayload>(identificationCardActions.DELETE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../../../../../../'], { relativeTo: payload.activatedRoute }))
+    );
 
   constructor(private actions$: Actions, private router: Router) { }
 

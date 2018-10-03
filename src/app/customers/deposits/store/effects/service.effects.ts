@@ -25,13 +25,14 @@ import {DepositAccountService} from '../../../../services/depositAccount/deposit
 import {Injectable} from '@angular/core';
 import * as instanceActions from '../deposit.actions';
 import {ChequeService} from '../../../../services/cheque/cheque.service';
+import { ActionWithPayload } from '../../../../common/store/interface/action-with-payload';
 
 @Injectable()
 export class DepositProductInstanceApiEffects {
 
   @Effect()
   search$: Observable<Action> = this.actions$
-    .ofType(instanceActions.SEARCH)
+    .ofType<ActionWithPayload>(instanceActions.SEARCH)
     .debounceTime(300)
     .map(action => action.payload)
     .switchMap(payload => {

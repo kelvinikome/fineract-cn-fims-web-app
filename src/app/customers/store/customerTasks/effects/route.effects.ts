@@ -17,20 +17,24 @@
  * under the License.
  */
 import {Injectable} from '@angular/core';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Observable} from 'rxjs/Observable';
 import {Action} from '@ngrx/store';
 import * as taskActions from '../customer-task.actions';
 import {Router} from '@angular/router';
+import {map, tap} from 'rxjs/operators';
+import { ActionWithPayload } from '../../../../common/store/interface/action-with-payload';
 
 @Injectable()
 export class CustomerTasksRouteEffects {
 
   @Effect({ dispatch: false })
   executeCustomerTaskSuccess$: Observable<Action> = this.actions$
-    .ofType(taskActions.EXECUTE_COMMAND_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }));
+    .pipe(
+      ofType<ActionWithPayload>(taskActions.EXECUTE_COMMAND_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }))
+    );
 
   constructor(private actions$: Actions, private router: Router) { }
 

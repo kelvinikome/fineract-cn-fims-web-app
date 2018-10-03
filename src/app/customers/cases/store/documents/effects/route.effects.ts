@@ -18,10 +18,11 @@
  */
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Action} from '@ngrx/store';
 import {Router} from '@angular/router';
 import * as documents from '../document.actions';
+import {tap} from 'rxjs/operators';
 import {
   CreateDocumentSuccessAction, DeleteDocumentSuccessAction, UpdateDocumentSuccessAction,
   UploadPageSuccessAction
@@ -32,20 +33,24 @@ export class CaseDocumentRouteEffects {
 
   @Effect({ dispatch: false })
   createUpdateSuccess$: Observable<Action> = this.actions$
-    .ofType(
-      documents.CREATE_SUCCESS,
-      documents.UPDATE_SUCCESS,
-      documents.UPLOAD_PAGE_SUCCESS
-    )
-    .do((action: CreateDocumentSuccessAction | UpdateDocumentSuccessAction | UploadPageSuccessAction) =>
-      this.router.navigate(['../'], { relativeTo: action.payload.activatedRoute} )
+    .pipe(
+      ofType(
+        documents.CREATE_SUCCESS,
+        documents.UPDATE_SUCCESS,
+        documents.UPLOAD_PAGE_SUCCESS
+      ),
+      tap((action: CreateDocumentSuccessAction | UpdateDocumentSuccessAction | UploadPageSuccessAction) =>
+        this.router.navigate(['../'], { relativeTo: action.payload.activatedRoute} )
+      )
     );
 
   @Effect({ dispatch: false })
   deleteSuccess$: Observable<Action> = this.actions$
-    .ofType(documents.DELETE_SUCCESS)
-    .do((action: DeleteDocumentSuccessAction) =>
-      this.router.navigate(['../../../../../../../../../../'], { relativeTo: action.payload.activatedRoute} )
+    .pipe(
+      ofType(documents.DELETE_SUCCESS),
+      tap((action: DeleteDocumentSuccessAction) =>
+        this.router.navigate(['../../../../../../../../../../'], { relativeTo: action.payload.activatedRoute} )
+      )
     );
 
   constructor(private actions$: Actions, private router: Router) { }
