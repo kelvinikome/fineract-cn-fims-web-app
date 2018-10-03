@@ -17,33 +17,40 @@
  * under the License.
  */
 import {Injectable} from '@angular/core';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Observable} from 'rxjs/Observable';
 import {Action} from '@ngrx/store';
 import * as accountActions from '../account.actions';
 import {Router} from '@angular/router';
 import { ActionWithPayload } from '../../../../common/store/interface/action-with-payload';
+import { map, tap} from 'rxjs/operators';
 
 @Injectable()
 export class AccountRouteEffects {
 
   @Effect({ dispatch: false })
-  createAccountSuccess$: Observable<ActionWithPayload> = this.actions$
-    .ofType(accountActions.CREATE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../../'], { relativeTo: payload.activatedRoute }));
+  createAccountSuccess$: Observable<Action> = this.actions$
+    .pipe(
+      ofType<ActionWithPayload>(accountActions.CREATE_SUCCESS),
+      map( action => action.payload ),
+      tap(payload => this.router.navigate(['../../'], { relativeTo: payload.activatedRoute }))
+    );
 
   @Effect({ dispatch: false })
-  updateAccountSuccess$: Observable<ActionWithPayload> = this.actions$
-    .ofType(accountActions.UPDATE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }));
+  updateAccountSuccess$: Observable<Action> = this.actions$
+    .pipe(
+      ofType<ActionWithPayload>(accountActions.UPDATE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }))
+    );
 
   @Effect({ dispatch: false })
   deleteAccountSuccess$: Observable<ActionWithPayload> = this.actions$
-    .ofType(accountActions.DELETE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../../../ledgers/detail', payload.resource.ledger], { relativeTo: payload.activatedRoute }));
+    .pipe(
+      ofType<ActionWithPayload>(accountActions.DELETE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../../../ledgers/detail', payload.resource.ledger], { relativeTo: payload.activatedRoute }))
+    );
 
   constructor(private actions$: Actions, private router: Router) { }
 }
