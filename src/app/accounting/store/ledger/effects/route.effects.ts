@@ -17,31 +17,37 @@
  * under the License.
  */
 import {Injectable} from '@angular/core';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Observable} from 'rxjs/Observable';
 import * as ledgerActions from '../ledger.actions';
 import {Router} from '@angular/router';
 import { ActionWithPayload } from '../../../../common/store/interface/action-with-payload';
+import {map, tap} from 'rxjs/operators';
+import { Action } from '@ngrx/store';
 
 @Injectable()
 export class LedgerRouteEffects {
   @Effect({ dispatch: false })
-  createLedgerSuccess$: Observable<ActionWithPayload> = this.actions$
-    .ofType(ledgerActions.CREATE_SUCCESS, ledgerActions.CREATE_SUB_LEDGER_SUCCESS, ledgerActions.UPDATE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }));
+  createLedgerSuccess$: Observable<Action> = this.actions$
+    .pipe(
+      ofType<ActionWithPayload>(ledgerActions.CREATE_SUCCESS, ledgerActions.CREATE_SUB_LEDGER_SUCCESS, ledgerActions.UPDATE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }))
+    );
 
   @Effect({ dispatch: false })
-  deleteLedgerSuccess$: Observable<ActionWithPayload> = this.actions$
-    .ofType(ledgerActions.DELETE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => {
-      if (payload.ledger.parentLedgerIdentifier) {
-        this.router.navigate(['../../', payload.ledger.parentLedgerIdentifier, 'ledgers'], { relativeTo: payload.activatedRoute });
-      } else {
-        this.router.navigate(['../../../../'], { relativeTo: payload.activatedRoute });
-      }
-    });
+  deleteLedgerSuccess$: Observable<Action> = this.actions$
+    .pipe(
+      ofType<ActionWithPayload>(ledgerActions.DELETE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => {
+        if (payload.ledger.parentLedgerIdentifier) {
+          this.router.navigate(['../../', payload.ledger.parentLedgerIdentifier, 'ledgers'], { relativeTo: payload.activatedRoute });
+        } else {
+          this.router.navigate(['../../../../'], { relativeTo: payload.activatedRoute });
+        }
+      })
+    );
 
   constructor(private actions$: Actions, private router: Router) { }
 }

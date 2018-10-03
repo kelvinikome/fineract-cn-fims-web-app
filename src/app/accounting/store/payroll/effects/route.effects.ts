@@ -17,20 +17,23 @@
  * under the License.
  */
 import {Injectable} from '@angular/core';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Router} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import * as payrollActions from '../payroll-collection.actions';
 import { ActionWithPayload } from '../../../../common/store/interface/action-with-payload';
+import {map, tap} from 'rxjs/operators';
 
 @Injectable()
 export class PayrollCollectionRouteEffects {
 
   @Effect({ dispatch: false })
   createPayrollSuccess$: Observable<ActionWithPayload> = this.actions$
-    .ofType(payrollActions.CREATE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }));
+    .pipe(
+      ofType<ActionWithPayload>(payrollActions.CREATE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }))
+    );
 
   constructor(private actions$: Actions, private router: Router) { }
 
