@@ -17,26 +17,32 @@
  * under the License.
  */
 import {Injectable} from '@angular/core';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Router} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import {Action} from '@ngrx/store';
 import {RangeActions} from '../range.actions';
+import { ActionWithPayload } from '../../../../../common/store/interface/action-with-payload';
+import { map, tap } from 'rxjs/operators';
 
 @Injectable()
 export class ProductChargeRangesRouteEffects {
 
   @Effect({ dispatch: false })
   createRangeSuccess$: Observable<Action> = this.actions$
-    .ofType(RangeActions.CREATE_SUCCESS, RangeActions.UPDATE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../'], { relativeTo: payload.data.activatedRoute} ));
+    .pipe(
+      ofType<ActionWithPayload>(RangeActions.CREATE_SUCCESS, RangeActions.UPDATE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../'], { relativeTo: payload.data.activatedRoute} ))
+    )
 
   @Effect({ dispatch: false })
   deleteRangeSuccess$: Observable<Action> = this.actions$
-    .ofType(RangeActions.DELETE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../../../../../../../'], { relativeTo: payload.data.activatedRoute} ));
+    .pipe(
+      ofType<ActionWithPayload>(RangeActions.DELETE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../../../../../../../'], { relativeTo: payload.data.activatedRoute} ))
+    );
 
   constructor(private actions$: Actions, private router: Router) { }
 }

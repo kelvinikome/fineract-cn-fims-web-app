@@ -17,27 +17,32 @@
  * under the License.
  */
 import {Injectable} from '@angular/core';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Observable} from 'rxjs/Observable';
 import {Action} from '@ngrx/store';
 import * as chargeActions from '../charge.actions';
 import {Router} from '@angular/router';
+import { map, tap } from 'rxjs/operators';
+import { ActionWithPayload } from '../../../../../common/store/interface/action-with-payload';
 
 @Injectable()
 export class ProductChargesRouteEffects {
 
   @Effect({ dispatch: false })
   createUpdateProductChargeSuccess$: Observable<Action> = this.actions$
-    .ofType(chargeActions.CREATE_SUCCESS, chargeActions.UPDATE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }));
+    .pipe(
+      ofType<ActionWithPayload>(chargeActions.CREATE_SUCCESS, chargeActions.UPDATE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }))
+    );
 
   @Effect({ dispatch: false })
   deleteChargeSuccess$: Observable<Action> = this.actions$
-    .ofType(chargeActions.DELETE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../../'], { relativeTo: payload.activatedRoute }));
-
+    .pipe(
+      ofType<ActionWithPayload>(chargeActions.DELETE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../../'], { relativeTo: payload.activatedRoute }))
+    );
   constructor(private actions$: Actions, private router: Router) { }
 
 }
