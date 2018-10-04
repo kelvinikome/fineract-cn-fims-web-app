@@ -17,12 +17,13 @@
  * under the License.
  */
 import {Injectable} from '@angular/core';
-import {Actions, Effect,toPayload} from '@ngrx/effects';
+import {Actions, Effect} from '@ngrx/effects';
 import {Observable} from 'rxjs/Observable';
 import {Action} from '@ngrx/store';
 import {of} from 'rxjs/observable/of';
 import * as meetingActions from '../meeting.actions';
 import {GroupService} from '../../../../services/group/group.service';
+import { ActionWithPayload } from '../../../../common/store/interface/action-with-payload';
 
 @Injectable()
 export class MeetingApiEffects {
@@ -30,7 +31,7 @@ export class MeetingApiEffects {
 
   @Effect()
   loadAll$: Observable<Action> = this.actions$
-    .ofType(meetingActions.LOAD_ALL)
+    .ofType<ActionWithPayload>(meetingActions.LOAD_ALL)
     .debounceTime(300)
     .map((action: meetingActions.LoadAllAction) => action.payload)
     //?.mergeMap(groupId =>
