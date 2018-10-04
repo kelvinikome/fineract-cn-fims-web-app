@@ -17,24 +17,28 @@
  * under the License.
  */
 import {Injectable} from '@angular/core';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Observable} from 'rxjs/Observable';
 import {Action} from '@ngrx/store';
 import * as employeeActions from '../employee.actions';
 import {Router} from '@angular/router';
+import {map, tap} from "rxjs/operators";
+import { ActionWithPayload } from '../../../common/store/interface/action-with-payload';
 
 @Injectable()
 export class EmployeeRouteEffects {
 
   @Effect({ dispatch: false })
   createEmployeeSuccess$: Observable<Action> = this.actions$
-    .ofType(employeeActions.CREATE_SUCCESS, employeeActions.UPDATE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute} ));
+    .pipe(
+      ofType<ActionWithPayload>(employeeActions.CREATE_SUCCESS, employeeActions.UPDATE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute} ))
+    );
 
   @Effect({ dispatch: false })
   deleteEmployeeSuccess$: Observable<Action> = this.actions$
-    .ofType(employeeActions.DELETE_SUCCESS)
+    .ofType<ActionWithPayload>(employeeActions.DELETE_SUCCESS)
     .map(action => action.payload)
     .do(payload => this.router.navigate(['../../'], { relativeTo: payload.activatedRoute }));
 
