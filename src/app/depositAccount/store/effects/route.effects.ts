@@ -19,24 +19,30 @@
 import {Action} from '@ngrx/store';
 import {Observable} from 'rxjs/Observable';
 import {Injectable} from '@angular/core';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Router} from '@angular/router';
 import * as definitionActions from '../product.actions';
+import {map, tap} from 'rxjs/operators';
+import { ActionWithPayload } from '../../../common/store/interface/action-with-payload';
 
 @Injectable()
 export class DepositProductDefinitionRouteEffects {
 
   @Effect({ dispatch: false })
   createProductDefinitionSuccess$: Observable<Action> = this.actions$
-    .ofType(definitionActions.CREATE_SUCCESS, definitionActions.UPDATE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }));
+    .pipe(
+      ofType<ActionWithPayload>(definitionActions.CREATE_SUCCESS, definitionActions.UPDATE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute }))
+    )
 
   @Effect({ dispatch: false })
   deleteProductDefinitionSuccess$: Observable<Action> = this.actions$
-    .ofType(definitionActions.DELETE_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => this.router.navigate(['../../../'], { relativeTo: payload.activatedRoute }));
+    .pipe(
+      ofType<ActionWithPayload>(definitionActions.DELETE_SUCCESS),
+      map(action => action.payload),
+      tap(payload => this.router.navigate(['../../../'], { relativeTo: payload.activatedRoute }))
+    );
 
   constructor(private actions$: Actions, private router: Router) { }
 
