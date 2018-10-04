@@ -19,9 +19,11 @@
 import {Action} from '@ngrx/store';
 import {Observable} from 'rxjs/Observable';
 import {Router} from '@angular/router';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Injectable} from '@angular/core';
 import * as tellerActions from '../teller.actions';
+import { ActionWithPayload } from '../../../common/store/interface/action-with-payload';
+import {map, tap} from 'rxjs/operators';
 
 @Injectable()
 export class TellerRouteEffects {
@@ -38,9 +40,11 @@ export class TellerRouteEffects {
 
   @Effect({dispatch: false})
   confirmTransactionSuccess$: Observable<Action> = this.actions$
-    .ofType(tellerActions.CONFIRM_TRANSACTION_SUCCESS)
-    .map(action => action.payload)
-    .do((payload) => this.router.navigate(['../../'], { relativeTo: payload.activatedRoute }));
+    .pipe(
+      ofType<ActionWithPayload>(tellerActions.CONFIRM_TRANSACTION_SUCCESS),
+      map(action => action.payload),
+      tap((payload) => this.router.navigate(['../../'], { relativeTo: payload.activatedRoute }))
+    );
 
   constructor(private actions$: Actions, private router: Router) {
   }

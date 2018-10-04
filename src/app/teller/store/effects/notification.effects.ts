@@ -17,11 +17,13 @@
  * under the License.
  */
 import {Injectable} from '@angular/core';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {NotificationService, NotificationType} from '../../../services/notification/notification.service';
 import {Observable} from 'rxjs/Observable';
 import {Action} from '@ngrx/store';
 import * as tellerActions from '../teller.actions';
+import {map, tap} from 'rxjs/operators';
+import { ActionWithPayload } from '../../../common/store/interface/action-with-payload';
 
 @Injectable()
 export class TellerNotificationEffects {
@@ -44,27 +46,31 @@ export class TellerNotificationEffects {
 
   @Effect({ dispatch: false })
   confirmTransactionSuccess: Observable<Action> = this.actions$
-    .ofType(tellerActions.CONFIRM_TRANSACTION_SUCCESS)
-    .map(action => action.payload)
-    .do((payload) => {
-      const action: string = payload.command === 'CONFIRM' ? 'confirmed' : 'canceled';
-      this.notificationService.send({
-        type: NotificationType.MESSAGE,
-        message: `Transaction successfully ${action}`
-      });
-    });
+    .pipe(
+      ofType<ActionWithPayload>(tellerActions.CONFIRM_TRANSACTION_SUCCESS),
+      map(action => action.payload),
+      tap((payload) => {
+        const action: string = payload.command === 'CONFIRM' ? 'confirmed' : 'canceled';
+        this.notificationService.send({
+          type: NotificationType.MESSAGE,
+          message: `Transaction successfully ${action}`
+        });
+      })
+    );
 
   @Effect({ dispatch: false })
   confirmTransactionFail: Observable<Action> = this.actions$
-    .ofType(tellerActions.CONFIRM_TRANSACTION_FAIL)
-    .map(action => action.payload)
-    .do((error) => {
-      this.notificationService.send({
-        title: 'Invalid transaction',
-        type: NotificationType.ALERT,
-        message: error.message
-      });
-    });
+    .pipe(
+      ofType<ActionWithPayload>(tellerActions.CONFIRM_TRANSACTION_FAIL),
+      map(action => action.payload),
+      tap((error) => {
+        this.notificationService.send({
+          title: 'Invalid transaction',
+          type: NotificationType.ALERT,
+          message: error.message
+        });
+      })
+    );
 
   constructor(private actions$: Actions, private notificationService: NotificationService) {}
 }
