@@ -17,11 +17,13 @@
  * under the License.
  */
 import {Injectable} from '@angular/core';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {NotificationService, NotificationType} from '../../../../services/notification/notification.service';
 import {Observable} from 'rxjs/Observable';
 import {Action} from '@ngrx/store';
 import * as tellerActions from '../teller.actions';
+import { map, filter, tap } from 'rxjs/operators';
+import { ActionWithPayload } from '../../../../common/store/interface/action-with-payload';
 
 @Injectable()
 export class TellerNotificationEffects {
@@ -44,26 +46,30 @@ export class TellerNotificationEffects {
 
   @Effect({ dispatch: false })
   openCommandFail$: Observable<Action> = this.actions$
-    .ofType(tellerActions.EXECUTE_COMMAND_FAIL)
-    .map(action => action.payload.command)
-    .filter(command => command.action === 'OPEN')
-    .do(action => this.notificationService.send({
-        type: NotificationType.ALERT,
-        title: 'Employee already assigned',
-        message: 'Employees can only be assigned to one teller. Please choose a different employee or unassign the employee first.'
-      })
+    .pipe(
+      ofType<ActionWithPayload>(tellerActions.EXECUTE_COMMAND_FAIL),
+      map(action => action.payload.command),
+      filter(command => command.action === 'OPEN'),
+      tap(action => this.notificationService.send({
+          type: NotificationType.ALERT,
+          title: 'Employee already assigned',
+          message: 'Employees can only be assigned to one teller. Please choose a different employee or unassign the employee first.'
+        })
+      )
     );
 
   @Effect({ dispatch: false })
   closeCommandFail$: Observable<Action> = this.actions$
-    .ofType(tellerActions.EXECUTE_COMMAND_FAIL)
-    .map(action => action.payload.command)
-    .filter(command => command.action === 'CLOSE')
-    .do(action => this.notificationService.send({
-        type: NotificationType.ALERT,
-        title: 'Denomination required',
-        message: 'This teller requires a denomination before it can be closed.'
-      })
+    .pipe(
+      ofType<ActionWithPayload>(tellerActions.EXECUTE_COMMAND_FAIL),
+      map(action => action.payload.command),
+      filter(command => command.action === 'CLOSE'),
+      tap(action => this.notificationService.send({
+          type: NotificationType.ALERT,
+          title: 'Denomination required',
+          message: 'This teller requires a denomination before it can be closed.'
+        })
+      )
     );
 
   constructor(private actions$: Actions, private notificationService: NotificationService) {

@@ -18,21 +18,25 @@
  */
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
-import {Actions, Effect} from '@ngrx/effects';
+import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Observable} from 'rxjs/Observable';
 import {Action} from '@ngrx/store';
 import * as denominationActions from '../denomination.actions';
+import { ActionWithPayload } from '../../../../../common/store/interface/action-with-payload';
+import { map, tap } from 'rxjs/operators';
 
 @Injectable()
 export class TellerDenominationRouteEffects {
 
   @Effect({ dispatch: false })
   createDenominationSuccess$: Observable<Action> = this.actions$
-    .ofType(denominationActions.CREATE_DENOMINATION_SUCCESS)
-    .map(action => action.payload)
-    .do(payload => {
-      this.router.navigate(['../'], { relativeTo: payload.activatedRoute });
-    });
+    .pipe(
+      ofType<ActionWithPayload>(denominationActions.CREATE_DENOMINATION_SUCCESS),
+      map(action => action.payload),
+      tap(payload => {
+        this.router.navigate(['../'], { relativeTo: payload.activatedRoute });
+      })
+    );
 
   constructor(private actions$: Actions, private router: Router) { }
 }
