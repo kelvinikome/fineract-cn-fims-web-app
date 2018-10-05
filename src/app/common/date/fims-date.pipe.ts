@@ -26,7 +26,7 @@ import {DatePipe} from '@angular/common';
 })
 export class DisplayFimsDate extends DatePipe implements PipeTransform {
 
-  constructor(@Inject(LOCALE_ID) private locale: string) {
+  constructor(@Inject(LOCALE_ID) locale: string) {
     super(locale);
   }
 
