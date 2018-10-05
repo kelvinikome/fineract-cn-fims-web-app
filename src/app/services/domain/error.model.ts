@@ -24,7 +24,7 @@ export class Error {
   statusText: string;
   message: string;
 
-  static handleError(errorResponse: any): ErrorObservable {
+  static handleError(errorResponse: any): ErrorObservable<any> {
     const error: Error = new Error(errorResponse.status, errorResponse.statusText, errorResponse.message);
 
     console.error(error.getErrorMessage());
