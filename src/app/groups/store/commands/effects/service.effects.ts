@@ -17,7 +17,7 @@
  * under the License.
  */
 import {Injectable} from '@angular/core';
-import {Actions, Effect, toPayload} from '@ngrx/effects';
+import {Actions, Effect} from '@ngrx/effects';
 import {Observable} from 'rxjs/Observable';
 import {Action} from '@ngrx/store';
 import {of} from 'rxjs/observable/of';
@@ -30,7 +30,7 @@ export class CommandApiEffects {
   @Effect()
   loadCommands$: Observable<Action> = this.actions$
     .ofType(commandActions.LOAD_ALL)
-    .map(toPayload)
+    .map(toPayload => toPayload.type)
     .mergeMap(groupId =>
       this.groupService.fetchGroupCommands(groupId)
         .map(commands => new commandActions.LoadAllCompleteAction(commands))
