@@ -22,13 +22,14 @@ import {Observable} from 'rxjs/Observable';
 import * as lossProvisionActions from '../loss-provision.actions';
 import {Action} from '@ngrx/store';
 import {Router} from '@angular/router';
+import { ActionWithPayload } from '../../../../../common/store/interface/action-with-payload';
 
 @Injectable()
 export class ProductLossProvisionRouteEffects {
 
   @Effect({ dispatch: false })
   updateLossProvisionSuccess$: Observable<Action> = this.actions$
-    .ofType(lossProvisionActions.UPDATE_SUCCESS)
+    .ofType<ActionWithPayload>(lossProvisionActions.UPDATE_SUCCESS)
     .map(action => action.payload)
     .do(payload => this.router.navigate(['../'], { relativeTo: payload.activatedRoute} ));
 
