@@ -44,8 +44,3 @@ export const getEmployeesLoadedAt = createSelector(getEmployeesState, getResourc
 export const getSelectedEmployee = createSelector(getEmployeesState, getResourceSelected);
 
 export class EmployeesStore extends Store<State> {}
-
-export function employeeStoreFactory(appStore: Store<fromRoot.State>) {
-  appStore.replaceReducer(employeeModuleReducer);
-  return appStore;
-}

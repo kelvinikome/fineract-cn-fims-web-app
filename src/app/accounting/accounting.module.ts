@@ -39,7 +39,7 @@ import {EditLedgerFormComponent} from './form/edit/edit.form.component';
 import {CreateLedgerFormComponent} from './form/create/create.form.component';
 import {LedgerExistsGuard} from './ledger-exists.guard';
 import {AccountExistsGuard} from './accounts/account-exists.guard';
-import {AccountingStore, accountingStoreFactory} from './store';
+import {AccountingStore} from './store';
 import {Store} from '@ngrx/store';
 import {AccountCommandNotificationEffects} from './store/account/task/effects/notification.effects';
 import {EffectsModule} from '@ngrx/effects';
@@ -184,7 +184,7 @@ import {FinancialConditionComponent} from './financialCondition/financial-condit
     LedgerExistsGuard,
     AccountExistsGuard,
     TransactionTypeExistsGuard,
-    { provide: AccountingStore, useFactory: accountingStoreFactory, deps: [Store]}
+    { provide: AccountingStore, deps: [Store]}
   ]
 })
 export class AccountingModule {}

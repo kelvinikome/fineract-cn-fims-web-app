@@ -71,11 +71,6 @@ export const portfolioModuleReducer: ActionReducer<State> = createReducer(reduce
 
 export class PortfolioStore extends Store<State> {}
 
-export function portfolioStoreFactory(appStore: Store<fromRoot.State>) {
-  appStore.replaceReducer(portfolioModuleReducer);
-  return appStore;
-}
-
 /**
  * Product selectors
  */

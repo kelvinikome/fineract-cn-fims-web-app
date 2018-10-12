@@ -30,7 +30,7 @@ import {HeadquarterGuard} from './headquarter/headquarter.guard';
 import {HeadquarterNotFoundComponent} from './headquarter/headquarter-not-found.component';
 import {OfficeExistsGuard} from './office-exists.guard';
 import {Store} from '@ngrx/store';
-import {OfficesStore, officeStoreFactory} from './store';
+import {OfficesStore} from './store';
 import {OfficeNotificationEffects} from './store/effects/notification.effects';
 import {EffectsModule} from '@ngrx/effects';
 import {OfficeRouteEffects} from './store/effects/route.effects';
@@ -132,7 +132,7 @@ import {DenominationFormComponent} from './detail/teller/detail/denomination/for
     OfficeExistsGuard,
     TellerExistsGuard,
     BalanceSheetService,
-    { provide: OfficesStore, useFactory: officeStoreFactory, deps: [Store]}
+    { provide: OfficesStore, deps: [Store]}
   ],
   entryComponents: []
 })

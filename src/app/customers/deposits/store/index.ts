@@ -43,11 +43,6 @@ export const depositModuleReducer: ActionReducer<State> = createReducer(reducers
 
 export class DepositsStore extends Store<State> {}
 
-export function depositsStoreFactory(appStore: Store<fromCustomer.State>) {
-  appStore.replaceReducer(depositModuleReducer);
-  return appStore;
-}
-
 export const getDepositSearchState = (state: State) => state.depositSearch;
 
 export const getSearchDeposits = createSelector(getDepositSearchState, getSearchEntities);

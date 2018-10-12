@@ -30,7 +30,7 @@ import {GroupEmployeesComponent} from './form/employees/employees.component';
 import {GroupCustomersComponent} from './form/customers/customers.component'
 import {EditGroupFormComponent} from './form/edit/edit.form.component';
 import {GroupExistsGuard} from './group-exists.guard';
-import {GroupsStore, groupStoreFactory} from './store';
+import {GroupsStore} from './store';
 import {Store} from '@ngrx/store';
 import {GroupSelectComponent} from '../common/group-select/group-select.component'
 import {GroupDetailComponent} from './detail/group.detail.component'
@@ -161,7 +161,7 @@ import {MeetingIndexComponent} from './detail/meeting/meeting.index.component'
     GroupExistsGuard,
     GroupDefinitionExistsGuard,
     
-    { provide: GroupsStore, useFactory: groupStoreFactory, deps: [Store]}
+    { provide: GroupsStore, deps: [Store]}
   ]
 })
 export class GroupModule {}

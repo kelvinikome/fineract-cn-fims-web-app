@@ -29,7 +29,7 @@ import { GroupEmployeesComponent } from './form/employees/employees.component';
 import { GroupCustomersComponent } from './form/customers/customers.component'
 import { EditGroupFormComponent } from './form/edit/edit.form.component';
 import { GroupExistsGuard } from './group-exists.guard';
-import { GroupsStore, groupStoreFactory } from './store';
+import { GroupsStore } from './store';
 import { Store } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { GroupCommandApiEffects } from './store/groupTasks/effects/service.effects';

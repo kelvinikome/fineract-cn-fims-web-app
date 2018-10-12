@@ -49,11 +49,6 @@ export const tellerModuleReducer: ActionReducer<State> = createReducer(reducers)
 
 export class TellerStore extends Store<State> {}
 
-export function tellerStoreFactory(appStore: Store<fromRoot.State>) {
-  appStore.replaceReducer(tellerModuleReducer);
-  return appStore;
-}
-
 export const getAuthenticationState = (state: State) => state.tellerAuthentication;
 
 export const isAuthenticated = createSelector(getAuthenticationState, fromAuthentication.getAuthenticated);

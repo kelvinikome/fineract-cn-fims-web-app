@@ -40,7 +40,7 @@ import {ProductStatusDetailComponent} from './status/status.detail.component';
 import {ProductMoratoriumFormComponent} from './form/moratorium/moratorium.component';
 import {ProductChargeEditFormComponent} from './charges/form/edit.component';
 import {Store} from '@ngrx/store';
-import {PortfolioStore, portfolioStoreFactory} from './store';
+import {PortfolioStore} from './store';
 import {ProductExistsGuard} from './product-exists.guard';
 import {ProductTaskExistsGuard} from './status/task-exists.guard';
 import {ProductChargeExistsGuard} from './charges/charge-exists.guard';
@@ -183,7 +183,7 @@ import {LossProvisionDetailComponent} from './lossProvision/loss-provision.detai
     ProductChargeExistsGuard,
     ProductChargeRangeExistsGuard,
     LoanLossProvisionExistsGuard,
-    { provide: PortfolioStore, useFactory: portfolioStoreFactory, deps: [Store]}
+    { provide: PortfolioStore, deps: [Store]}
   ]
 })
 export class ProductModule {}

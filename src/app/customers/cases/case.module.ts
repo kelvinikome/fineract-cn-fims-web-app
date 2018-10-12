@@ -27,7 +27,7 @@ import {CaseFormComponent} from './form/form.component';
 import {CaseListComponent} from './case.list.component';
 import {CaseDetailComponent} from './case.detail.component';
 import {CaseEditComponent} from './form/edit.component';
-import {CasesStore, caseStoreFactory} from './store';
+import {CasesStore} from './store';
 import {Store} from '@ngrx/store';
 import {CaseExistsGuard} from './case-exists.guard';
 import {CaseDetailPaymentCycleComponent} from './payment-cycle/payment-cycle.component';
@@ -165,7 +165,7 @@ import {CreateDocumentPageComponent} from './documents/form/upload/create.form.c
     DocumentExistsGuard,
     FeeService,
     DocumentsService,
-    { provide: CasesStore, useFactory: caseStoreFactory, deps: [Store]}
+    { provide: CasesStore, deps: [Store]}
   ]
 })
 export class CaseModule {}

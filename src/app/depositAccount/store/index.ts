@@ -51,11 +51,6 @@ export const depositAccountModuleReducer: ActionReducer<State> = createReducer(r
 
 export class DepositAccountStore extends Store<State> {}
 
-export function depositAccountStoreFactory(appStore: Store<fromRoot.State>) {
-  appStore.replaceReducer(depositAccountModuleReducer);
-  return appStore;
-}
-
 export const getProductsState = (state: State) => state.depositProducts;
 
 export const getProductFormState = (state: State) => state.depositProductForm;

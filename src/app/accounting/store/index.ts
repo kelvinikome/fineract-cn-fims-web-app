@@ -95,11 +95,6 @@ export const accountingModuleReducer: ActionReducer<State> = createReducer(reduc
 
 export class AccountingStore extends Store<State> {}
 
-export function accountingStoreFactory(appStore: Store<fromRoot.State>) {
-  appStore.replaceReducer(accountingModuleReducer);
-  return appStore;
-}
-
 /**
  * Ledger Selectors
  */

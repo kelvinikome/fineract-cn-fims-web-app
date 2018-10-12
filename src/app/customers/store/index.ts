@@ -72,11 +72,6 @@ export class CustomersStore extends Store<State> {}
 
 export const customerModuleReducer: ActionReducer<State> = createReducer(reducers);
 
-export function customerStoreFactory(appStore: Store<fromRoot.State>) {
-  appStore.replaceReducer(customerModuleReducer);
-  return appStore;
-}
-
 export const getCustomersState = (state: State) => state.customers;
 
 export const getCustomerFormState = (state: State) => state.customerForm;

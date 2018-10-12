@@ -21,7 +21,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TellerRoutes} from './teller.routing';
 import {RouterModule} from '@angular/router';
-import {TellerStore, tellerStoreFactory} from './store';
+import {TellerStore} from './store';
 import {Store} from '@ngrx/store';
 import {TellerIndexComponent} from './teller.index.component';
 import {TellerLoginGuard} from './teller-login.guard';
@@ -105,7 +105,7 @@ import {AvailableActionService} from './services/available-actions.service';
     TellerCustomerExistsGuard,
     TellerTransactionService,
     AvailableActionService,
-    { provide: TellerStore, useFactory: tellerStoreFactory, deps: [Store]}
+    { provide: TellerStore, deps: [Store]}
   ]
 })
 export class TellerModule { }

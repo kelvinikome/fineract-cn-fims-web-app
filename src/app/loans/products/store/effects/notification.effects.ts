@@ -17,11 +17,12 @@
  * under the License.
  */
 import {Injectable} from '@angular/core';
-import {Actions, Effect, toPayload} from '@ngrx/effects';
+import {Actions, Effect} from '@ngrx/effects';
 import {Observable} from 'rxjs/Observable';
 import {Action} from '@ngrx/store';
 import * as productActions from '../product.actions';
 import {NotificationService, NotificationType} from '../../../../services/notification/notification.service';
+import { ActionWithPayload } from '../../../../common/store/interface/action-with-payload';
 
 @Injectable()
 export class ProductNotificationEffects {
@@ -54,7 +55,7 @@ export class ProductNotificationEffects {
   @Effect({ dispatch: false })
   enableProductSuccess$: Observable<Action> = this.actions$
     .ofType(productActions.ENABLE_SUCCESS)
-    .map(toPayload)
+    .map((action: ActionWithPayload) => action.payload)
     .do(payload => {
       const action: string = payload.enable ? 'enabled' : 'disabled';
       this.notificationService.send({
@@ -66,7 +67,7 @@ export class ProductNotificationEffects {
   @Effect({ dispatch: false })
   enableProductFail$: Observable<Action> = this.actions$
     .ofType(productActions.ENABLE_FAIL)
-    .map(toPayload)
+    .map((action: ActionWithPayload) => action.payload)
     .do(payload => this.notificationService.send({
       type: NotificationType.ALERT,
       message: 'Product could not be enabled'

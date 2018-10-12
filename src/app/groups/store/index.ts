@@ -64,11 +64,6 @@ export class GroupsStore extends Store<State> {}
 
 export const groupModuleReducer: ActionReducer<State> = createReducer(reducers);
 
-export function groupStoreFactory(appStore: Store<fromRoot.State>) {
-  appStore.replaceReducer(groupModuleReducer);
-  return appStore;
-}
-
 export const getGroupsState = (state: State) => state.groups;
 
 export const getGroupFormState = (state: State) => state.groupForm;

@@ -17,7 +17,7 @@
  * under the License.
  */
 import {Store} from '@ngrx/store';
-import {DepositAccountStore, depositAccountStoreFactory} from './store';
+import {DepositAccountStore} from './store';
 import {DepositProductDefinitionNotificationEffects} from './store/effects/notification.effects';
 import {DepositProductDefinitionRouteEffects} from './store/effects/route.effects';
 import {DepositProductDefinitionApiEffects} from './store/effects/service.effects';
@@ -103,7 +103,7 @@ import {CreateDividendFormComponent} from './detail/dividends/form/create.compon
   ],
   providers: [
     ProductDefinitionExistsGuard,
-    { provide: DepositAccountStore, useFactory: depositAccountStoreFactory, deps: [Store]}
+    { provide: DepositAccountStore, deps: [Store]}
   ]
 })
 export class DepositAccountModule {}

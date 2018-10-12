@@ -70,11 +70,6 @@ export const caseModuleReducer: ActionReducer<State> = createReducer(reducers);
 
 export class CasesStore extends Store<State> {}
 
-export function caseStoreFactory(appStore: Store<fromCustomer.State>) {
-  appStore.replaceReducer(caseModuleReducer);
-  return appStore;
-}
-
 export const getCaseSearchState = (state: State) => state.caseSearch;
 
 export const getSearchCases = createSelector(getCaseSearchState, getSearchEntities);

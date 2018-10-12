@@ -53,11 +53,6 @@ export const officeModuleReducer: ActionReducer<State> = createReducer(reducers)
 
 export class OfficesStore extends Store<State> {}
 
-export function officeStoreFactory(appStore: Store<fromRoot.State>) {
-  appStore.replaceReducer(officeModuleReducer);
-  return appStore;
-}
-
 export const getOfficesState = (state: State) => state.offices;
 
 export const getOfficeFormState = (state: State) => state.officeForm;

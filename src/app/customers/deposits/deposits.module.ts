@@ -38,7 +38,7 @@ import {DepositCreateComponent} from './form/create.component';
 import {DepositFormComponent} from './form/form.component';
 import {DepositsListComponent} from './deposits.list.component';
 import {Store} from '@ngrx/store';
-import {DepositsStore, depositsStoreFactory} from './store';
+import {DepositsStore} from './store';
 import {DepositRoutes} from './deposits.routes';
 import {EffectsModule} from '@ngrx/effects';
 import {DepositProductInstanceApiEffects} from './store/effects/service.effects';
@@ -89,7 +89,7 @@ import {IssueChequeComponent} from './detail/cheques/cheques.component';
   ],
   providers: [
     DepositInstanceExistsGuard,
-    { provide: DepositsStore, useFactory: depositsStoreFactory, deps: [Store] }
+    { provide: DepositsStore, deps: [Store] }
   ]
 })
 export class DepositsModule {}

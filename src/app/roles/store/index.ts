@@ -37,11 +37,6 @@ export const roleModuleReducer: ActionReducer<State> = createReducer(reducers);
 
 export class RolesStore extends Store<State> {}
 
-export function roleStoreFactory(appStore: Store<fromRoot.State>) {
-  appStore.replaceReducer(roleModuleReducer);
-  return appStore;
-}
-
 export const getRolesState = (state: State) => state.roles;
 
 export const getRoleFormState = (state: State) => state.roleForm;
